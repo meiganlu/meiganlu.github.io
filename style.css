@@ -9,7 +9,6 @@
     scroll-behavior: smooth;
 }
 body {
-    background-color: #233932;
     font-family: "Poppins", sans-serif;
     animation: moveBackground 10s infinite alternate;
 }
@@ -203,6 +202,9 @@ body {
 }
 .text > p {
     font-size: 18px;
+}
+.highlight {
+    color: #f896e9;
 }
 .fsText {
     width: 50%;
