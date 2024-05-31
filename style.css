@@ -199,11 +199,14 @@ body {
     flex-direction: column;
     object-fit: cover;
     gap: 25px;
-    font-size: 20px;
     color: #e2fbf3;
+    font-size: 25px;
 }
 .text > h1 {
     color: #8FDBC2;
+}
+.text > p {
+    font-size: 18px;
 }
 .fsText {
     width: 50%;
@@ -227,6 +230,15 @@ body {
     inset: 0;
     z-index: -1;
     background-color: #8FDBC2;
+}
+.fsTextWrap > h4 {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #8FDBC2;
+    font-size: 40px;
+    letter-spacing: 1px;
+    padding-bottom: 40px;
 }
 .fsTextWrap > h3 {
     font-weight: 500;
