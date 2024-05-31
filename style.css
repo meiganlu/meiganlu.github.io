@@ -42,10 +42,10 @@ body {
 .header_navbar {
     width: 100%;
     padding: 0 20px;
-    position: fixed; /* Fixed position to keep it visible */
+    position: fixed;
     top: 0;
     z-index: 999;
-    backdrop-filter: blur(6px); /* Apply a blur effect */
+    backdrop-filter: blur(6px); 
 }
 .hn_wrap {
     width: 100%;
@@ -120,7 +120,7 @@ body {
     background-color: #8FDBC2;
 }
 
-/* ===== FIRST SECTION ===== */
+/* ===== OTHER SECTION ===== */
 .firstSection {
     width: 100%;
     height: 100vh;
@@ -143,7 +143,7 @@ body {
 
 .about-content {
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    flex-wrap: wrap; 
 }
 
 .profile-image {
@@ -156,7 +156,7 @@ body {
 
 .profile-image img {
     width: 100%;
-    height: auto; /* Change to auto to maintain aspect ratio */
+    height: auto; 
     object-fit: cover;
 }
 .text {
@@ -164,12 +164,7 @@ body {
     max-width: 500px;
     text-align: left;
     padding-left: 50px;
-    /* Add the following properties for text wrapping */
-    float: left;
-    shape-outside: circle(50%);
-    margin-right: 20px;
 }
-/* Additional CSS for responsiveness */
 @media (max-width: 768px) {
     .aboutSection {
         padding-left: 20px;
@@ -177,13 +172,13 @@ body {
     }
 
     .about-content {
-        flex-direction: column; /* Stack elements vertically on smaller screens */
-        text-align: center; /* Center text on smaller screens */
+        flex-direction: column; 
+        text-align: center; 
     }
 
     .profile-image {
-        margin-right: 0; /* Remove margin on smaller screens */
-        margin-bottom: 20px; /* Add margin bottom for spacing */
+        margin-right: 0;
+        margin-bottom: 20px; 
     }
 }
 .fsWrap {
@@ -456,7 +451,7 @@ form button:hover {
 }
 
 footer {
-    color: #252525;
+    color: #131313;
     padding: 1rem 0;
     text-align: center;
     font-size: 14px;
@@ -490,7 +485,7 @@ footer .social-media a:hover {
     opacity: 1;
 }
 
-/* Add CSS for scroll animations */
+/* For scroll animations */
 .scroll-element {
     opacity: 0;
     transform: translateY(50px);
@@ -509,15 +504,4 @@ footer .social-media a:hover {
 
 .photo-item:hover .caption {
     opacity: 1;
-}
-
-/* Light and Dark Theme */
-body.light-theme {
-    background-color: #f0f0f0;
-    color: #333;
-}
-
-body.dark-theme {
-    background-color: #233932;
-    color: #8FDBC2;
 }

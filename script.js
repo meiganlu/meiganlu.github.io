@@ -69,17 +69,3 @@ const handleScrollAnimation = () => {
 window.addEventListener("scroll", () => {
     handleScrollAnimation();
 });
-
-// Theme switcher
-const themeToggleButton = document.querySelector('.theme .input');
-const body = document.body;
-
-themeToggleButton.addEventListener('change', () => {
-    if (themeToggleButton.checked) {
-        body.classList.add('light-theme');
-        body.classList.remove('dark-theme');
-    } else {
-        body.classList.add('dark-theme');
-        body.classList.remove('light-theme');
-    }
-});
