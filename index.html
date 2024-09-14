@@ -1,95 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meigan Lu</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="asset/LO.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
-</head>
-<body class="dark-theme">
-    <div id="main">
-        <div class="header_navbar">
-            <div class="hn_wrap" id="navbar">
-                <a href="" class="hn_Logo">
-                    <div class="fsTextWrap">
-                        <h2>Meigan Lu</h2>
-                    </div>
-                </a>
-                <div class="nav_menu">
-                    <ul>
-                        <li><a href="#" class="hnLink activeNH">Home</a></li>
-                        <li><a href="#" class="hnLink">Projects</a></li>
-                    </ul>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Build animated components like a pro</title>
+        <link rel="stylesheet" href="./styles.css" />
+        <script src="./app.js" defer></script>
+        <script src="https://kit.fontawesome.com/cc56f14920.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="home">
+        <div class="opener">
+            <h1 class="logo-header">
+                <span class="logo">Wel</span><span class="logo">come&nbsp;:)</span>
+            </h1>
+        </div>
+        
+        <!---------- TOP OF THE PAGE, HEADER PAGE ---------->
+        <div class="tracker"></div>
+        <section class="showcase overflow-hidden">
+            <a href="./index.html" class="logo1">
+                <img src="./assets/images/lu.png" alt="" class="logo-image" />
+            </a>
+
+            <!--- NAVIGATION BAR --->
+            <nav class="navbar vertical-center line line-vertical">
+                <ul>
+                    <li><a href="./index.html" class="link">HOME</a></li>
+                    <li><a href="about" class="link">ABOUT</a></li>
+                    <li><a href="projects" class="link">PROJECTS</a></li>   
+                </ul>
+            </nav>
+
+            <!--- DESCRIPTION AND PHOTOS --->
+            <h1 class="title line line-horizontal overflow-hidden">
+                <span class="to-right has-in-common" style="font-weight: 501">HI! I'M <span style="color:#9864ff; font-weight: 501">MEIGAN</span>.</span>
+                <span class="to-right has-in-common"><span style="--delay: 0.8s; color:#33c7e5; font-weight: 501">BACKEND</span><span style="font-weight: 501"> &</span></span>
+                <span class="to-right has-in-common"><span style="color:#e848e8; font-weight: 501">FULL-STACK<br></span><span style="font-weight: 501">DEVELOPER</span>.
+                <span class="button"><span class="area live pulse"></span>DAVIS, CA</span></span>
+            </h1>
+
+            <div class="description line line-horizontal">
+                <p class="overflow-hidden">  
+                    <span class="main-body" style="--delay: 0.75s">
+                        <span class="grabber to-right has-in-common" style="font-size: 2.25rem; font-weight: 600">I specialize in creating a digital experience that is<br>
+                            <span style="color:#9864ff">efficient</span>, <span style="color:#33c7e5">functional</span>, and 
+                            <span style="color:#e848e8">user-centric</span>.
+                        </span>
+                        <span class="social-icons btns to-right has-in-common" data-offset=".05" style="--delay: 1s">
+                            <a href="https://github.com/meiganlu"><i class="fa-brands fa-github has-in-common" data-offset=".05" style="--delay: 1s"></i></a>
+                            <a href="https://www.linkedin.com/in/meigan-lu/"><i class="fa-brands fa-linkedin has-in-common" data-offset=".05" style="--delay: 1s"></i></a>
+                            <a href="./assets/images/Resume — Lu, Meigan.pdf">CV</a>
+                        </span>
+
+                        <!--<a href="about" class="cta link scale-rotate has-in-common" style="--delay: 1s">Want to learn more about me?</a>-->
+
+                        <!--<img src="./assets/images/hello.png" alt="" class="shape has-in-common sm-hidden" data-offset=".05" style="--delay: .5s">-->
+                        <img src="./assets/images/okay.png" alt="" class="shape shape-md has-in-common sm-hidden" data-offset=".025" style="--delay: .25s">
+                        <img src="./assets/images/99.png" alt="" class="shape shape-lg has-in-common sm-hidden" data-offset=".02" style="--delay: .35s"> 
+                        <img src="./assets/images/h5.png" alt="" class="shape shape-rg has-in-common sm-hidden" data-offset=".02" style="--delay: .45s">
+                    </span>
+                </p>
+            </div>
+        </section>
+    </body>
+
+    <body>
+        <!---------- SLIDER CAROUSEL ---------->
+        <!--<section class="slider">
+            <div class="slider" reverse="true" style="--width: 475px; --height: 250px; --quantity: 4;">
+                <div class="list">
+                    <div class="item" style="--position: 1"><img src="./assets/images/Group 72.png" alt=""></div>
+                    <div class="item" style="--position: 2"><img src="./assets/images/Group 71.png" alt=""></div>
+                    <div class="item" style="--position: 3"><img src="./assets/images/Group 71.png" alt=""></div>
+                    <div class="item" style="--position: 4"><img src="./assets/images/Group 71.png" alt=""></div>
                 </div>
             </div>
-        </div>
-        <div class="firstSection">
-            <div class="fsWrap">
-                <div class="fsText" id="particles-js">
-                    <div class="fsTextWrap">
-                        <header class="fade-in-header">
-                            <h1>Hi! I'm Meigan.</h1>
-                        </header>                        
-                        <div class="fstyping">
-                            <span class="fsTextType first-text">Software Developer.</span>
+        </section>-->
+
+         <!---------- FLIP-CARD SECTION ---------->
+        <section class="lang">
+            <div class="card">
+                <div class="card-container">
+
+                    <!--- FLIP-CARD 1 --->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <article class="card-article c1"></article>
+                            </div>
+                            <div class="flip-card-back">
+                                <article class="card-article c9"></article>
+                            </div>
                         </div>
-                        <h3>Welcome to my personal website!</h3>
-                        <div class="fsSMCon">
-                            <a href="https://github.com/meiganlu"><i class="bx bxl-github"></i></a>
-                            <a href="https://www.linkedin.com/in/meigan-lu/"><i class="bx bxl-linkedin"></i></a>
-                            <a href="https://www.instagram.com/meigan.lu/"><i class="bx bxl-instagram"></i></a>
-                        </div>                        
-                        <a href="assets/resume.pdf" download><button type="button" id="dcvbtn">Download CV</button></a>
+                    </div>
+
+                    <!--- FLIP-CARD 2 --->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <article class="card-article c2"></article>
+                            </div>
+                            <div class="flip-card-back">
+                                <div class="flip-card-front">
+                                    <article class="card-article c10"></article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--- FLIP-CARD 3 --->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <article class="card-article c3"></article>
+                            </div>
+                            <div class="flip-card-back">
+                                <div class="flip-card-front">
+                                    <article class="card-article c11"></article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--- FLIP-CARD 4 --->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <article class="card-article c4"></article>
+                            </div>
+                            <div class="flip-card-back">
+                                <div class="flip-card-front">
+                                    <article class="card-article c12"></article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--- FLIP-CARD 5 --->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <article class="card-article c5"></article>
+                            </div>
+                            <div class="flip-card-back">
+                                <div class="flip-card-front">
+                                    <article class="card-article c13"></article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--- FLIP-CARD 6 --->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <article class="card-article c6"></article>
+                            </div>
+                            <div class="flip-card-back">
+                                <div class="flip-card-front">
+                                    <article class="card-article c14"></article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--- FLIP-CARD 7 --->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <article class="card-article c7"></article>
+                            </div>
+                            <div class="flip-card-back">
+                                <div class="flip-card-front">
+                                    <article class="card-article c15"></article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--- FLIP-CARD 8 --->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <article class="card-article c8"></article>
+                            </div>
+                            <div class="flip-card-back">
+                                <div class="flip-card-front">
+                                    <article class="card-article c16"></article>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="aboutSection">
-            <div class="about-content">
-                <div class="profile-image">
-                    <img src="assets/photo2.jpg" alt="Profile Image">
-                </div>
-                <div class="text">
-                    <h1>Nice to meet you!</h1>
-                    <p>My name is Meigan Lu and I'm an undergraduate student at UC Davis pursuing a B.S. in <span class="highlight">Computer Science</span>.</p>
-                    <p>I am dedicated to expanding my skills in <span class="highlight">full-stack development</span>. I am a passionate software developer and my primary interest has currently been web development. </p>
-                    <p>At the heart of my technical pursuits is my commitment to <span class="highlight">enhancing user experience</span> and addressing diverse user needs with innovative solutions.</p>
-                    <p>Additionally, I am deeply passionate about fostering <span class="highlight">inclusion and representation</span> for marginalized groups in STEM. I am committed to bridging the gap and creating a more equitable and accessible future for the field.</p>
-                </div>
+        </section>
+
+        <!---------- WORK EXPERIENCE SECTION ---------->
+        <section class="main">
+            <div class="tab intro">
+                <h2 class="animation-show">My Work Experience</h2>
+                <p class="animation-show">
+                    In my previous roles, I found myself navigating two distinct positions that highlighted the intersection between 
+                    computer software and hardware, and the amount of intricate detail that goes into bridging the two together. I had always known that 
+                    software development was demanding on its own, but these experiences introduced me to a whole new side—one that was 
+                    unsurprisingly challenging yet incredibly fulfilling to navigate, especially with the help of others.
+
+                    <br><br>Both companies had their own individual missions, but they embodied my <span style="font-weight:600; color:#000">core values</span> as a developer: 
+                    having a team-savvy spirit, a passion for collaborative learning, and a commitment to enhancing the experience of 
+                    people they directly impact. It's this commitment to making a positive difference, even in the face of difficulty, that 
+                    continues to drive my love for this field.
+                </p>
+                <!--<a href="#experience" class="btn">Learn More</a>-->
+                <img src="./assets/images/Group 37.png" class=" tab main-sticker sticker-animation"></img>
             </div>
-        </div>       
-        <div class="fsTextWrap">
-            <h4>Check out my photos!</h4>
-        </div> 
-        <div class="photo-grid">
-            <div class="photo-item">
-                <img src="assets/photo5.jpg" alt="Photo 1">
+
+            <div class="tab groq">
+                <h2 class="animation-show">Groq Summer 2024 Internship</h2>
+                <h3 class="animation-show">NPI Test Development Engineer Intern (July — Sept)</h3>
+                <p class="animation-show">
+                    AI is the new modern age of technology, and Groq is at the forefront. 
+                    
+                    <br><br>I am extremely grateful to have been given 
+                    the opportunity to work at a startup company that is making momentous change in its industry. My role as an NPI Test
+                    Development Engineer Intern has allowed me to work alongside a senior engineer to develop and implement test suites for 
+                    GroqCards to enhance test coverage, identify anomalies, and validate quality standards for serviceability.
+
+                    <br><br><i class="disclaimer">Disclaimer: Since my internship is still ongoing, the information and picture I'm using are 
+                    already public and are chosen carefully and purposefully.</i>
+                </p>
+                <!--<a href="#experience" class="btn">Learn More</a>-->
+                <img src="./assets/images/Group 44 (1).png" class=" tab groq-sticker animation-show"></img>
             </div>
-            <div class="photo-item">
-                <img src="assets/photo7.jpg" alt="Photo 2">
+
+            <div class="tab comptechs">
+                <h2 class="animation-show">CompTechS Fall 2022 Internship</h2>
+                <h3 class="animation-show">Computer Technical Support Intern (Oct — Dec)</h3>
+                <p class="animation-show">
+                    At the heart of every community are programs and individuals that want to give back to others. That was CompTechS
+                    to scholarship students and other impacted individuals in the greater Bay Area and beyond.
+
+                    <br><br>I've learned many valuable lessons from my time at CompTechS, but the most important fact I've learned through my experience
+                    is that everyone has a need for accessible technology—one that is reliable and efficient for this day and age. My role gave me the 
+                    opportunity to work with a team of dedicated students and faculty to restore reclaimed laptops back to their near-original state &#40both on the software
+                    and hardware side&#41.
+                </p>
+                <!--<a href="#experience" class="btn">Learn More</a>-->
+                <div class="space">Hello</div>
+                <img src="./assets/images/Group 54.png" class="tab comptechs-sticker animation-show"></img>
             </div>
-            <div class="photo-item">
-                <img src="assets/photo6.jpg" alt="Photo 3">
+
+            <div class="tab intro">
+                <h2 class="animation-show">My Projects</h2>
+                <p class="animation-show">
+                    My interests in computer science have been honed through my real-world and academic experiences as well as 
+                    my own personal projects. The evolution of my skills and design goals throughout the years has evolved to 
+                    become more user-centric and interactive without every compromising the true mission of the project. As I continue
+                    to get hands-on experience in fast-paced environments, I am excited to see how my projects will continue to evolve and grow
+                    as I do.
+                </p>
+                <a href="projects" class="btn">Learn More</a>
+                <img src="./assets/images/Group 57.png" class=" tab main-sticker sticker-animation"></img>
             </div>
-            <div class="photo-item">
-                <img src="assets/photo1.jpg" alt="Photo 4">
+            <div class="space">Hello</div>
+            <div class="space">Hello</div>
+        </section>
+
+        <section class="carousel next">
+            <div class="list">
+                <article class="item other_1">
+                    <div class="main-content" style="background-color: #a1c182;">
+                        <div class="content">
+                            <h2>My Personal Website &#40this one!&#41</h2>
+                            <p class="description">
+                                Learn about everything I did to make this website.
+                            </p>
+
+                        </div>
+                    </div>
+                    <figure class="image">
+                        <img src="./assets/images/Group 12.png" alt="">
+                        <figcaption></figcaption>
+                    </figure>
+                </article>
+                <article class="item active">
+                    <div class="main-content" style="background-color: #eec4b7;">
+                        <div class="content">
+                            <h2>MegaMart</h2>
+                            <p class="description">
+                                Java-based grocery store.
+                            </p>
+
+                        </div>
+                    </div>
+                    <figure class="image">
+                        <img src="./assets/images/Group 13.png" alt="">
+                        <figcaption></figcaption>
+                    </figure>
+                </article>
+                <article class="item other_2">
+                    <div class="main-content" style="background-color: #f3d79a;">
+                        <div class="content">
+                            <h2>Auto-dimming Headlights and Object Detection System</h2>
+                            <p class="description">
+                                Within a tight 4-day timeline, I in a team of three others created an 
+                                auto-dimming headlights and object detectiion system prototype using C++ and Arduino.
+                            </p>
+
+                        </div>
+                    </div>
+                    <figure class="image">
+                        <img src="./assets/images/Group 15.png" alt="">
+                        <figcaption></figcaption>
+                    </figure>
+                </article>
             </div>
-            <div class="photo-item">
-                <img src="assets/photo4.jpg" alt="Photo 5">
+            <div class="arrows">
+                <button id="prev"><</button>
+                <button id="next">></button>
             </div>
-            <div class="photo-item">
-                <img src="assets/photo3.jpg" alt="Photo 6">
+        </section>
+
+        <section class="main">
+            <div class="tab end contact-btn">
+                <a href=mailto:meiganlu@gmail.com?body=I%20look%20forward%20to%20getting%20to%20know%20you!><p class="has-in-common" 
+                    data-offset=".05" style="--delay: 1s">Do you think I'm a good fit for you? <br>If so, let's chat!</p></a>
             </div>
-        </div>                  
-    </div>
-    <footer>
-        <p>© 2024 Meigan Lu. All Rights Reserved.</p>
-    </footer>
-    <script src="particle script/particles.js"></script>
-    <script src="particle script/app.js"></script>
-    <script src="script.js"></script>
-</body>
+        </section>
+
+        <!---------- FOOTER ---------->
+        <footer class="footer">
+            <p>© 2024 Meigan Lu. All Rights Reserved.</p>
+        </footer>
+    </body>
+    </html>
+    
 </html>
