@@ -1,3 +1,9 @@
+window.onbeforeunload = function () {
+    setTimeout(() => {
+        window.scrollTo(0, 0);
+    }, 10);
+}
+
 let opener = document.querySelector('.opener');
 let logo = document.querySelector('.logo-header');
 let logoSpan = document.querySelectorAll('.logo');
