@@ -1,7 +1,7 @@
 window.onbeforeunload = function () {
     setTimeout(() => {
         window.scrollTo(0, 0);
-    }, 8);
+    }, 9);
 }
 
 let opener = document.querySelector('.opener');
