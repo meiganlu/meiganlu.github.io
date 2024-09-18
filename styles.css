@@ -772,8 +772,8 @@ img {
     margin-left: 15rem;
     margin-right: 15rem;
     align-items: center;
-    padding-top: 16rem;
-    padding-bottom: 14rem;
+    padding-top: 12rem;
+    padding-bottom: 6rem;
 }
 
 .intro h2 {
@@ -835,7 +835,6 @@ img {
     flex-direction: column;
     margin-left: 17rem;
     margin-right: 12rem;
-    margin-top: 5rem;
 }
 
 .comptechs h2 {
@@ -915,7 +914,7 @@ img {
 }
 
 /************* PROJECTS CAROUSEL *************/
-
+/*
 * {
     box-sizing: border-box;
     margin: 0;
@@ -1099,7 +1098,7 @@ header{
 .arrows{
     z-index: 10;
 }
-/* prev */
+
 .prev .list .item .image img,
 .prev .list .item .image figcaption{
     animation: effectPrev 0.5s ease-in-out 1 forwards;
@@ -1153,7 +1152,7 @@ header{
         left: 50%;
         justify-content: center;
     }
-}
+}*/
 
 .end {
     text-align: center;
@@ -1294,3 +1293,238 @@ header {
 u {
     text-decoration: underline;
   }
+
+
+  
+
+.work {
+    position: relative;
+    width: 100vw;
+    height: 102vh;
+    background: #c5afd6;
+    padding: 6em 4em;
+    transition: background-color 0.5s ease;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0%;
+    left: 15.25%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10em;
+    transition: 1s;
+    opacity: 0.5;
+}
+
+.prev {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    transform: rotate(10deg);
+    transition: transform 0.5s ease;
+}
+
+.prev.active {
+    transform: rotate(12.5deg);
+}
+
+#prev-1 {
+    top: -500px;
+}
+
+#prev-2 {
+    top: 0;
+}
+
+#prev-3 {
+    top: 500px;
+}
+
+.projects3 p {
+    position: relative;
+    color: #fff;
+    font-size: 5rem;
+    margin-bottom: 1em;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.projects3 h1 {
+    color: #fff;
+    opacity: 0.5;
+    font-size: 4.25rem;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.work-item {
+    position: relative;
+    width: 100%;
+    padding: 2em 0;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    transition: 0.5s;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.work-item#w-3 {
+    border-bottom: none;
+}
+
+.work-item-icon {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: #0b1925;
+    color: #fff;
+    overflow: hidden;
+    left: -20px;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.icon-holder {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.i-1 {
+    transition-delay: 0.2s;
+    left: -70px;
+}
+
+.i-2 {
+    left: 0px;
+}
+
+.projects3 button {
+    position: relative;
+    background: #fff;
+    color: #0b1925;
+    border: none;
+    transition: 0.5s;
+    padding: 1em 2em;
+    margin: 2em 0;
+    font-size: 15px;
+    border-radius: 100px;
+    font-weight: 500;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.projects3 button:hover {
+    transform: scale(1) translate3d(0, -3px, 0);
+}
+
+.work.hovered button {
+    background: #0b1925;
+    color: #fff;
+}
+
+.work.hovered h1 {
+    color: #0b1925;
+    opacity: 1;
+}
+
+.work.hovered p {
+    color: #0b1925;
+}
+
+.work.hovered .work-item {
+    border-bottom: 1px solid #0b1925;
+}
+
+.work.hovered .work-item#w-3 {
+    border-bottom: none;
+}
+
+.work-item:hover .work-item-icon {
+    opacity: 1;
+    left: 0px;
+}
+
+.work-item:hover .icon-holder.i-1 {
+    left: 0;
+}
+
+.work-item:hover .icon-holder.i-2 {
+    left: 70px;
+}
+
+.bg-color-red {
+    background-color: #faccd1;
+}
+
+.bg-color-blue {
+    background-color: #ccdee0;
+}
+
+.bg-color-green {
+    background-color: #c0cfb2;
+}
+
+@media(max-width: 900px) {
+    .work {
+        padding: 4em 1em;
+    }
+    .work-item {
+        gap: 1em;
+    }
+    .projects3 p {
+        font-size: 16px;
+    }
+    .projects3 h1 {
+        font-size: 30px;
+    }
+    .work-item-icon {
+        transform: scale(0.75);
+    }
+    .projects3 button {
+        padding: 1em 2em;
+    }
+}
+
+
+
+.hover-block {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+}
+
+.tooltip {
+    position: absolute;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 5px;
+    font-size: 2rem;
+    white-space: nowrap;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.2s ease-in-out;
+}
+
+.tooltip.visible {
+    visibility: visible;
+    opacity: 1;
+}

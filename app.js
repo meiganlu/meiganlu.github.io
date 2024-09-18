@@ -69,6 +69,7 @@ window.addEventListener("scroll", (event) => {
     })
 });  
 
+/*
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
 let carousel = document.querySelector('.carousel');
@@ -118,8 +119,88 @@ const changeSlider = () => {
     clearInterval(autoPlay);
     autoPlay = setInterval(() => {
         next.click();
-    }, 5000);
+    }, 10000);
 }
 let autoPlay = setInterval(() => {
     next.click();
-}, 5000);
+}, 10000);
+*/
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const workItems = document.querySelectorAll(".work-item");
+    const work = document.querySelector(".work");
+    const overlay = document.querySelector(".overlay");
+    const prevElements = document.querySelectorAll(".prev");
+
+    overlay.style.top = "0%";
+    overlay.style.left = "13.25%";
+    document.querySelector("#prev-2").classList.add("active");
+
+    function removeActiveClass() {
+        prevElements.forEach(function (prev) {
+            prev.classList.remove("active");
+        });
+    }
+
+    workItems.forEach((item, index) => {
+        item.addEventListener("mouseover", function () {
+            removeActiveClass();
+            const activePrev = document.querySelector("#prev-" + (index + 1));
+            if (activePrev) {
+                activePrev.classList.add("active");
+            }
+
+            work.classList.add("hovered");
+            switch (index) {
+                case 0:
+                    overlay.style.top = "50%";
+                    overlay.style.left = "50%";
+                    work.className = "work bg-color-red hovered";
+                    break;
+                case 1:
+                    overlay.style.top = "0%";
+                    overlay.style.left = "13.25%";
+                    work.className = "work bg-color-blue hovered";
+                    break;
+                case 2:
+                    overlay.style.top = "-50%";
+                    overlay.style.left = "-23.5%";
+                    work.className = "work bg-color-green hovered";
+                    break;
+            }
+        });
+
+        item.addEventListener("mouseout", function () {
+            work.classList.remove("hovered");
+            work.className = "work";
+            overlay.style.top = "0%";
+            overlay.style.left = "13.25%";
+            removeActiveClass();
+            document.querySelector("#prev-2").classList.add("active");
+        });
+    });
+});
+
+
+
+const hoverBlock = document.querySelector('.hover-block');
+const tooltip = document.getElementById('tooltip');
+
+hoverBlock.addEventListener('mousemove', (e) => {
+    // Get the mouse cursor's position
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+
+    // Position the tooltip near the cursor
+    tooltip.style.left = `${mouseX + 10}px`;
+    tooltip.style.top = `${mouseY + 10}px`;  // Adjust top to move the tooltip above the cursor
+
+    // Make the tooltip visible
+    tooltip.classList.add('visible');
+});
+
+hoverBlock.addEventListener('mouseleave', () => {
+    // Hide the tooltip when the mouse leaves the block
+    tooltip.classList.remove('visible');
+});
