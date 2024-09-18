@@ -184,23 +184,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-const hoverBlock = document.querySelector('.hover-block');
+const hoverBlocks = document.querySelectorAll('.hover-block');
 const tooltip = document.getElementById('tooltip');
 
-hoverBlock.addEventListener('mousemove', (e) => {
-    // Get the mouse cursor's position
-    const mouseX = e.clientX;
-    const mouseY = e.clientY;
+hoverBlocks.forEach((hoverBlock) => {
+    hoverBlock.addEventListener('mousemove', (e) => {
+        const mouseX = e.clientX;
+        const mouseY = e.clientY;
 
-    // Position the tooltip near the cursor
-    tooltip.style.left = `${mouseX + 10}px`;
-    tooltip.style.top = `${mouseY + 10}px`;  // Adjust top to move the tooltip above the cursor
+        // Set tooltip content based on data-tooltip attribute
+        const tooltipMessage = hoverBlock.getAttribute('data-tooltip');
+        tooltip.innerHTML = tooltipMessage;
 
-    // Make the tooltip visible
-    tooltip.classList.add('visible');
-});
+        tooltip.style.left = `${mouseX + 30}px`;
+        tooltip.style.top = `${mouseY + 50}px`; 
 
-hoverBlock.addEventListener('mouseleave', () => {
-    // Hide the tooltip when the mouse leaves the block
-    tooltip.classList.remove('visible');
+        tooltip.classList.add('visible');
+    });
+
+    hoverBlock.addEventListener('mouseleave', () => {
+        tooltip.classList.remove('visible');
+    });
 });
