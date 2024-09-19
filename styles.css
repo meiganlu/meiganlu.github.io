@@ -1301,7 +1301,7 @@ u {
     position: relative;
     width: 100vw;
     height: 90vh;
-    background: #c7b4d5;
+    background: linear-gradient(180deg,hsl(266, 84%, 83%), hsl(28, 84%, 85%));
     padding: 6em 6em;
     transition: background-color 0.5s ease;
     overflow: hidden;
@@ -1439,7 +1439,7 @@ u {
 }
 
 .work.hovered h1 {
-    color: #0b1925;
+    color: #3c3f41;
     opacity: 1;
 }
 
@@ -1469,15 +1469,15 @@ u {
 }
 
 .bg-color-red {
-    background-color: #faccd1;
+    background: linear-gradient(180deg,hsl(294, 82%, 85%), hsl(48, 63%, 81%));
 }
 
 .bg-color-blue {
-    background-color: #ccdee0;
+    background: linear-gradient(180deg,hsl(48, 63%, 81%), hsl(233, 84%, 88%));
 }
 
 .bg-color-green {
-    background-color: #c0cfb2;
+    background: linear-gradient(180deg,hsl(233, 84%, 88%), #d2e8cd);
 }
 
 @media(max-width: 900px) {
