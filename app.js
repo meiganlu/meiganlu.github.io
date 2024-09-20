@@ -1,6 +1,6 @@
-/*window.onbeforeunload = function () {
+window.onbeforeunload = function () {
     window.scrollTo(0, 0);
-}*/
+}
 
 let opener = document.querySelector('.opener');
 let logo = document.querySelector('.logo-header');
