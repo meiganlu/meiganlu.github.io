@@ -61,7 +61,7 @@ img {
 
 .showcase {
     position: relative;
-    height: 100vh;
+    height: 100%;
     padding: 2rem;
     text-align: center;
     isolation: isolate;
