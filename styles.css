@@ -1310,6 +1310,12 @@ u {
 }
 
 @media (max-width: 767px) {
+    .home,
+    .lang,
+    .main,
+    .projects3 {
+        overflow-x: hidden;
+    }
     .navbar {
         padding-block: 1rem;
     }
@@ -1426,7 +1432,7 @@ u {
         margin-left: 1.5rem;
     }
     .work {
-        height: 76vh;
+        height: 82vh;
     }
     .contact-btn a {
         font-size: 3rem;
