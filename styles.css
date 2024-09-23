@@ -600,7 +600,6 @@ img {
     }
     .card-container {
       grid-template-columns: repeat(4, 328px);
-      column-gap: 2rem;
       row-gap: 2rem;
     }
   }
