@@ -581,6 +581,12 @@ img {
     }
   }
 
+  /* For medium devices */
+  @media screen and (min-width: 440px) {
+    .card-container {
+      grid-template-columns: 328px;
+    }
+  }
   @media screen and (min-width: 768px) {
     .card-container {
       grid-template-columns: repeat(2, 328px);
