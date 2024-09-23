@@ -57,6 +57,8 @@ img {
 
 .grabber {
     padding-top: 1rem;
+    font-size: 2.25rem;
+    font-weight: 60;
 }
 
 .showcase {
@@ -1139,6 +1141,10 @@ u {
     color: #fff;
 }
 
+.cta1 {
+    display: block;
+}
+
 .work.hovered h1 {
     color: #3c3f41;
     opacity: 1;
@@ -1300,5 +1306,141 @@ u {
     }
     .work {
         height: 60vh;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar {
+        padding-block: 1rem;
+    }
+    .navbar ul {
+        flex-direction: row;
+    }
+    .navbar li {
+        font-size: 1.25rem;
+        text-align: center;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .title {
+        font-size: 5rem;
+        height: 48.5vh;
+    }
+    .button {
+        padding: 1rem 2.8rem;
+        border-radius: 4rem;
+        font-size: 1.25rem;
+        width: 15rem;
+        height: 4rem;
+    }
+    .grabber {
+        font-size: 1.6rem;
+        text-align: left;
+    }
+    .card {
+        display: none;
+    }
+    .intro h2 {
+        font-size: 5rem;
+        margin-top: 0;
+        text-align: center;
+    }
+    .intro p {
+        font-size: 1.4rem;
+    }
+    .intro{
+        margin-left: 4.5rem;
+        margin-right: 4.5rem;
+        padding-bottom: 0rem;
+    }
+    .groq {
+        margin-left: 4.5rem;
+        margin-right: 4.5rem;
+        padding-bottom: 0rem;
+        display: block;
+    }
+    .groq h2 {
+        font-size: 3rem;
+        padding-top: 3rem;
+    }
+    .groq h3 {
+        font-size: 1.4rem;
+    }
+    .groq p {
+        font-size: 1.3rem;
+        padding-bottom: 8rem;
+    }
+    .groq-sticker {
+        width: 100%;     
+        margin: 0;       
+        position: static; 
+        margin-top: 0rem;
+    }
+    .comptechs {
+        margin-left: 4.5rem;
+        margin-right: 4.5rem;
+        padding-bottom: 0rem;
+    }
+    .comptechs h2 {
+        font-size: 3rem;
+        padding-top: 10rem;
+    }
+    .comptechs h3 {
+        font-size: 1.4rem;
+    }
+    .comptechs p {
+        font-size: 1.3rem;
+    }
+    .comptechs-sticker {
+        width: 100%;     
+        margin: 0;       
+        position: static; 
+        margin-top: 0rem;
+    }
+    .main-sticker {
+        display: none;
+    }
+    .animation-show {
+        transform: none; 
+        opacity: 1;   
+        transition: none; 
+    }
+    .active .animation-show {
+        transform: none; 
+        opacity: 1;      
+    }
+    .home {
+        height: 88vh;
+    }
+    .projects3 p {
+        font-size: 2.2rem;
+        margin-left: 1.5rem;
+        transition: none;
+    }
+    .projects3 h1 {
+        font-size: 2.9rem;
+        margin-left: 1.5rem;
+        transition: none;
+    }
+    .cta1 {
+        margin-left: 1.5rem;
+    }
+    .work {
+        height: 76vh;
+    }
+    .contact-btn a {
+        font-size: 3rem;
+    }
+    .end {
+        padding-left: 6rem; 
+        padding-right: 6rem;
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
+    .work-item-icon {
+        display: none;
+    }
+    .tooltip {
+        display: none;
     }
 }

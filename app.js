@@ -206,3 +206,7 @@ hoverBlocks.forEach((hoverBlock) => {
         tooltip.classList.remove('visible');
     });
 });
+
+document.querySelector('.mobile-menu-icon').addEventListener('click', function() {
+    document.querySelector('.navbar').classList.toggle('active');
+});
