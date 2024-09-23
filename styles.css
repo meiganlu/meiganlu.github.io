@@ -581,6 +581,13 @@ img {
     }
   }
 
+  @media screen and (min-width: 768px) {
+    .card-container {
+      grid-template-columns: repeat(2, 328px);
+      column-gap: 2rem;
+    }
+  }
+
 /*** FLIP-CARD STYLES ***/
 .flip-card {
     perspective: 1000px;
