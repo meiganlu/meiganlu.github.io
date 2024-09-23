@@ -593,6 +593,22 @@ img {
       column-gap: 2rem;
     }
   }
+  /* For large devices */
+  @media screen and (min-width: 1024px) {
+    .card {
+      height: 100vh;
+    }
+    .card-container {
+      grid-template-columns: repeat(4, 328px);
+      column-gap: 6rem;
+      row-gap: 2rem;
+    }
+  }
+  @media screen and (min-width: 2560px) {
+    .card-container {
+      row-gap: 6rem;
+    }
+  }
 
 /*** FLIP-CARD STYLES ***/
 .flip-card {
@@ -1283,13 +1299,5 @@ u {
     }
     .work {
         height: 60vh;
-    }
-    .card {
-        height: 100vh;
-    }
-    .card-container {
-        grid-template-columns: repeat(4, 328px);
-        column-gap: 6rem;
-        row-gap: 6rem;
     }
 }
