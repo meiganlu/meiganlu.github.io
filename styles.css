@@ -1232,6 +1232,9 @@ u {
 }
 
 @media (min-width: 1000px) { /* Adjust as needed */
+    .title {
+        height: 54vh;
+    }
     .main-sticker {
         right: 20vw; /* Example adjustment for wide screens */
         margin-right: 0; /* Remove margin if necessary */
