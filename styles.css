@@ -606,7 +606,8 @@ img {
   }
   @media screen and (min-width: 2560px) {
     .card-container {
-      row-gap: 6rem;
+        grid-template-columns: repeat(4, 328px);
+        row-gap: 6rem;
     }
   }
 
