@@ -1237,7 +1237,7 @@ u {
     opacity: 1;
 }
 
-@media (min-width: 2560px) and (min-height: 1200px) { /* Adjust as needed */
+@media (min-width: 2250px) and (min-height: 1200px) { /* Adjust as needed */
     .title {
         height: 54vh;
     }
