@@ -1340,7 +1340,7 @@ u {
         height: 4rem;
     }
     .grabber {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         text-align: left;
     }
     .card {
@@ -1430,9 +1430,10 @@ u {
     }
     .cta1 {
         margin-left: 1.5rem;
+        margin-bottom: 4rem;
     }
     .work {
-        height: 94vh;
+        height: 82vh;
     }
     .contact-btn a {
         font-size: 3rem;
