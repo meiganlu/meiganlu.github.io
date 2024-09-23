@@ -600,13 +600,14 @@ img {
     }
     .card-container {
       grid-template-columns: repeat(4, 328px);
-      column-gap: 6rem;
+      column-gap: 2rem;
       row-gap: 2rem;
     }
   }
   @media screen and (min-width: 2560px) {
     .card-container {
         grid-template-columns: repeat(4, 328px);
+        column-gap: 6rem;
         row-gap: 6rem;
     }
   }
