@@ -327,6 +327,9 @@ footer {
 }
 
 @media (max-width: 767px) {
+    .home {
+        overflow-x: hidden;
+    }
     .navbar {
         padding-block: 1rem;
     }
@@ -338,5 +341,49 @@ footer {
         text-align: center;
         margin-left: 1rem;
         margin-right: 1rem;
+    }
+    .contact-btn a {
+        font-size: 3rem;
+    }
+    .container {
+        overflow-x: hidden;
+        height: 16vh;
+        width: 75%;
+        font-size: 4rem;
+    }
+    .container2 {
+        overflow-x: hidden;
+        height: 54vh;
+        width: 75%;
+        font-size: 1.6rem;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    .end {
+        padding-left: 6rem; 
+        padding-right: 6rem;
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+        overflow-x: hidden;
+    }
+    .column {
+        display: block; /* Ensures each item is displayed as a block */
+        width: 90%;    /* Makes each item take up full width */
+        margin-bottom: 1rem; /* Optional: Adds space between the items */
+        overflow-x: hidden;
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 1.5rem;
+    }
+    /* Remove flex properties from any parent container */
+    .goals {
+        display: block; /* Reset to block if it was flex */
+        width: 90%;   /* Ensure full width */
+        overflow-x: hidden;
+        margin-bottom: 0rem;
+    }
+    .column:not(:last-child) {
+        border-right: none;
     }
 }
