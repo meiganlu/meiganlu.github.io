@@ -601,7 +601,16 @@ img {
       height: 100vh;
     }
     .card-container {
-      grid-template-columns: repeat(3, 328px);
+      grid-template-columns: repeat(4, 328px);
+      row-gap: 2rem;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .card {
+      height: 100vh;
+    }
+    .card-container {
+      grid-template-columns: repeat(4, 328px);
       row-gap: 2rem;
     }
   }
@@ -1012,7 +1021,7 @@ u {
 .work {
     position: relative;
     width: 100vw;
-    height: 90vh;
+    height: 78vh;
     background: linear-gradient(180deg,hsl(266, 84%, 83%), hsl(28, 84%, 85%));
     padding: 6em 6em;
     transition: background-color 0.5s ease;
@@ -1318,7 +1327,7 @@ u {
     }
 }
 
-@media (min-width: 767px) and (max-width: 2250px) { 
+@media (min-width: 767px) and (max-width: 2250px) and (min-height: 1200px) { 
     .title {
         height: 30vh;
     }
