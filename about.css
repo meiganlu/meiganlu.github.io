@@ -347,13 +347,13 @@ footer {
     }
     .container {
         overflow-x: hidden;
-        height: 16vh;
+        height: 20vh;
         width: 75%;
         font-size: 4rem;
     }
     .container2 {
         overflow-x: hidden;
-        height: 54vh;
+        height: 62vh;
         width: 75%;
         font-size: 1.6rem;
     }
