@@ -302,10 +302,6 @@ footer {
 }
 
 
-
-
-
-
 @media (min-width: 2250px) and (min-height: 1200px) { 
     .navbar li {
         font-size: 0.75vw;
@@ -316,7 +312,7 @@ footer {
     }
 }
 
-@media (min-width: 767px) and (max-width: 2250px) { 
+@media (min-width: 767px) and (max-width: 2250px) and (min-height: 1200px) { 
     .navbar li {
         font-size: 1.25vw;
     }
