@@ -601,6 +601,15 @@ img {
       height: 100vh;
     }
     .card-container {
+      grid-template-columns: repeat(3, 328px);
+      row-gap: 2rem;
+    }
+  }
+  @media screen and (min-width: 1600px) {
+    .card {
+      height: 100vh;
+    }
+    .card-container {
       grid-template-columns: repeat(4, 328px);
       row-gap: 2rem;
     }
@@ -1303,6 +1312,80 @@ u {
     }
     .comptechs-sticker {
         right: 22vw; 
+    }
+    .work {
+        height: 60vh;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 2250px) { 
+    .title {
+        height: 30vh;
+    }
+    .grabber {
+        font-size: 2rem;
+        text-align: left;
+    }
+    .main-sticker {
+        right: 7vw; 
+        margin-right: 0; 
+        margin-top: 34rem;
+    }
+    .navbar li {
+        font-size: 1.25vw;
+    }
+    .home {
+        height: 400%;
+        overflow-x: hidden;
+    }
+    .card-article {
+        padding: 0rem;
+        border-radius: 2rem;
+        overflow: hidden;
+        width: 250px;
+        height: 250px;
+    }
+    .intro h2 {
+        font-size: 8rem;
+        margin-top: 3rem;
+    }
+    .intro p {
+        font-size: 1.5rem;
+    }
+    .groq {
+        margin-left: 14rem;
+        margin-right: 52rem;
+    }
+    .groq h2 {
+        font-size: 3.8rem;
+    }
+    .groq h3 {
+        font-size: 1.6rem;
+    }
+    .groq p {
+        font-size: 1.5rem;
+    }
+    .comptechs {
+        margin-left: 14rem;
+        margin-bottom: 6rem;
+        margin-right: 52rem;
+    }
+    .comptechs h2 {
+        font-size: 3.8rem;
+    }
+    .comptechs h3 {
+        font-size: 1.6rem;
+    }
+    .comptechs p {
+        font-size: 1.5rem;
+    }
+    .groq-sticker {
+        right: 0vw; 
+        width: 25%; 
+    }
+    .comptechs-sticker {
+        right: 0vw; 
+        width: 25%; 
     }
     .work {
         height: 60vh;

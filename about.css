@@ -167,6 +167,64 @@ a {
     }
 }
 
+.container {
+    height: 26vh;
+    width: 95%;
+    background: linear-gradient(45deg, #d2001a, #7462ff, #f48e21, #23d5ab);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+    overflow-x: hidden;
+    border-radius: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 2.5%;
+    font-size: 10rem;
+    color:#ffffff;
+    opacity: 0.8;
+}
+
+.container2 {
+    height: 20vh;
+    width: 95%;
+    background: linear-gradient(45deg, rgba(210, 0, 26, 0.25), rgba(116, 98, 255, 0.25), rgba(244, 142, 33, 0.25), rgba(35, 213, 171, 0.25));
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+    overflow-x: hidden;
+    border-radius: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 2.5%;
+    font-size: 2rem;
+    color:#060606;
+}
+@keyframes color {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+.space {
+    color: #ffffff;
+}
+
+i {
+    font-style: italic;
+}
+
+.container2 p {
+    margin-left: 18%;
+    margin-right: 18%;
+}
 
 
 
@@ -174,6 +232,16 @@ a {
 @media (min-width: 2250px) and (min-height: 1200px) { 
     .navbar li {
         font-size: 0.75vw;
+    }
+    .home {
+        height: 400%;
+        overflow-x: hidden;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 2250px) { 
+    .navbar li {
+        font-size: 1.25vw;
     }
     .home {
         height: 400%;
