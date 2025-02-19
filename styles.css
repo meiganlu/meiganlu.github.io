@@ -20,11 +20,12 @@ html {
 .home {
     height: 100vh;
     width: 100vw;
-    background-color: hsl(28, 100%, 99.99%);
+    background: hsl(266, 100%, 97%);
     font-family: "Quicksand", sans-serif;
     font-size: 1.6rem;
     line-height: 1.5;
     color: #060606;
+    z-index: 1;
 }
 
 footer {
@@ -92,7 +93,7 @@ img {
     height: 4rem;
     color: #060606;
  
-    background: #e8ddfc;
+    background: #d5c2f6;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -115,19 +116,43 @@ img {
 }
 
 .navbar {
-    padding-block: 1.5rem;
+    position: fixed;
+    top: 20px; /* Adjust vertical position */
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-flex; /* Ensures background only covers the links */
+    padding: 0.75rem 1.5rem; /* Space inside the navbar */
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50px; /* Fully rounded edges */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999; /* Ensures it stays above other elements */
 }
 
 .navbar ul {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem 2rem;
+    align-items: center;
+    gap: 2rem; /* Adjust spacing between links */
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .navbar li {
-    margin-right: 60px;
-    font-size: 1.15vw;
+    font-size: 1vw;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    padding: 0.5rem 1rem; /* Space around the text */
+    border-radius: 20px; /* Smooth edges */
+    transition: background 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    background: rgba(255, 255, 255, 0.3); /* Subtle hover effect */
 }
 
 /*** UTILITY CLASSES ***/
@@ -142,9 +167,9 @@ img {
 /*** UTILITY CLASSES END ***/
 
 .title {
-    font-size: 5.75vw;
+    font-size: 5.5vw;
     font-weight: 500;
-    margin-top: 3rem;
+    margin-top: 5rem;
     margin-right: 4rem;
     height: 350px;
     text-align: left;
@@ -452,7 +477,7 @@ img {
   }
   
 .card {
-    background: linear-gradient(180deg,hsl(28, 100%, 95%),hsl(266, 100%, 92%));
+    background-color: #ffffff;
     display: grid;
     place-items: center;
     padding-block: 4rem;
@@ -855,7 +880,8 @@ img {
 
 .space {
     padding-bottom: 6rem;
-    color:#ffffff;
+    background-color:#ffffff;
+    color: #ffffff;
 }
 
 .animation-show {
@@ -1333,7 +1359,7 @@ u {
         height: 30vh;
     }
     .grabber {
-        font-size: 2rem;
+        font-size: 1.75rem;
         text-align: left;
     }
     .main-sticker {
