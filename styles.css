@@ -18,7 +18,9 @@ html {
 }
 
 .home {
-    background-color: #ffffff;
+    height: 100vh;
+    width: 100vw;
+    background-color: hsl(28, 100%, 99.99%);
     font-family: "Quicksand", sans-serif;
     font-size: 1.6rem;
     line-height: 1.5;
@@ -56,7 +58,7 @@ img {
 }
 
 .grabber {
-    padding-top: 1rem;
+    padding-top: 0rem;
     font-size: 2.25rem;
     font-weight: 60;
 }
@@ -140,11 +142,11 @@ img {
 /*** UTILITY CLASSES END ***/
 
 .title {
-    font-size: 6.6vw;
+    font-size: 5.75vw;
     font-weight: 500;
     margin-top: 3rem;
     margin-right: 4rem;
-    height: 55vh;
+    height: 350px;
     text-align: left;
 }
 
@@ -1274,7 +1276,6 @@ u {
         font-size: 0.75vw;
     }
     .home {
-        height: 400%;
         overflow-x: hidden;
     }
     .card-article {
@@ -1344,7 +1345,6 @@ u {
         font-size: 1.25vw;
     }
     .home {
-        height: 400%;
         overflow-x: hidden;
     }
     .card-article {
