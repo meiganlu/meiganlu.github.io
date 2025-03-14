@@ -1,19 +1,6 @@
-// Add preload class to body immediately
-if (document.body) {
-    document.body.classList.add('preload');
-  }
-  
-  // Create and append loader if it doesn't exist
-  document.addEventListener('DOMContentLoaded', function() {
-    if (!document.getElementById('page-loader') && document.body) {
-      const loader = document.createElement('div');
-      loader.id = 'page-loader';
-      loader.innerHTML = '<div class="loader-spinner"></div>';
-      loader.style.display = 'none'; // Keep loader hidden by default
-      document.body.prepend(loader);
-    }
-  
-    // SimpleIcons handling
+// Wait for DOM to be ready before running any scripts
+document.addEventListener('DOMContentLoaded', function() {
+    // SimpleIcons handling with better error handling
     if (typeof SimpleIcons !== 'undefined') {
       const iconContainers = document.querySelectorAll('.icon-container');
       
@@ -37,17 +24,93 @@ if (document.body) {
       console.log('SimpleIcons library not loaded');
     }
   
-    // Opener animation
-    const opener = document.querySelector('.opener');
-    const logoSpan = document.querySelectorAll('.logo');
+    // Remove preload class and setup animations
+    setupAnimations();
   
+    // Setup work section hover effects
+    setupWorkSection();
+  
+    // Setup tooltip hover effects
+    setupTooltips();
+  
+    // Setup mobile menu
+    setupMobileMenu();
+  });
+  
+  // Add preload class to body immediately (only if body exists)
+  if (document.body) {
+    document.body.classList.add('preload');
+  
+    // Create and append loader if it doesn't exist
+    if (!document.getElementById('page-loader')) {
+      const loader = document.createElement('div');
+      loader.id = 'page-loader';
+      loader.innerHTML = '<div class="loader-spinner"></div>';
+      loader.style.display = 'none'; // Keep loader hidden by default
+      document.body.prepend(loader);
+    }
+  }
+  
+  // Keep scroll to top on reload but don't show loader
+  window.onbeforeunload = function() {
+    // Just scroll to top without showing the loader
+    window.scrollTo(0, 0);
+    return null;
+  };
+  
+  // Mousemove effect for shapes and tracker
+  document.addEventListener('mousemove', function(e) {
+    const shapes = document.querySelectorAll('.shape');
+    const tracker = document.querySelector('.tracker');
+  
+    if (tracker) {
+      tracker.style.top = `${e.clientY}px`;
+      tracker.style.left = `${e.clientX}px`;
+      tracker.style.opacity = 1;
+    }
+  
+    if (shapes.length > 0) {
+      shapes.forEach((shape) => {
+        const shapeOffset = shape.getAttribute('data-offset');
+        if (shapeOffset) {
+          let offsetX = (window.innerWidth - e.clientX) * shapeOffset;
+          let offsetY = (window.innerHeight - e.clientY) * shapeOffset;
+          shape.style.translate = `${offsetX}px ${offsetY}px`;
+        }
+      });
+    }
+  });
+  
+  // Parallax scrolling effect for tabs
+  window.addEventListener('scroll', function() {
+    const listTab = document.querySelectorAll('.tab');
+    if (listTab.length > 0) {
+      let top = window.scrollY;
+      listTab.forEach((tab) => {
+        if (tab.offsetTop - top < 550) {
+          tab.classList.add('active');
+        } else {
+          tab.classList.remove('active');
+        }
+      });
+    }
+  });
+  
+  // Function to handle animation setup
+  function setupAnimations() {
     // First ensure we're at the top
     window.scrollTo(0, 0);
     
+    const opener = document.querySelector('.opener');
+    const logoSpan = document.querySelectorAll('.logo');
+    
     // Reset animation states without waiting
-    document.querySelectorAll('.animation-show').forEach(el => {
-      el.classList.remove('animate');
-    });
+    const animationElements = document.querySelectorAll('.animation-show');
+    if (animationElements.length > 0) {
+      animationElements.forEach(el => {
+        el.classList.remove('animate');
+      });
+    }
     
     if (logoSpan.length > 0) {
       logoSpan.forEach(span => {
@@ -56,10 +119,12 @@ if (document.body) {
     }
     
     // Force a reflow to ensure clean animation state
-    void document.body.offsetHeight;
-    
-    // Allow transitions to work
-    document.body.classList.remove('preload');
+    if (document.body) {
+      void document.body.offsetHeight;
+      
+      // Allow transitions to work
+      document.body.classList.remove('preload');
+    }
     
     // Make opener visible if it exists
     if (opener) {
@@ -94,21 +159,25 @@ if (document.body) {
     
     // Trigger animation-show elements with original timing
     setTimeout(() => {
-      document.querySelectorAll('.animation-show').forEach((element, index) => {
-        setTimeout(() => {
-          element.classList.add('animate');
-        }, index * 300);
-      });
+      if (animationElements.length > 0) {
+        animationElements.forEach((element, index) => {
+          setTimeout(() => {
+            element.classList.add('animate');
+          }, index * 300);
+        });
+      }
     }, 100);
+  }
   
-    // Work section hover effect
+  // Function to handle work section
+  function setupWorkSection() {
     const card = document.getElementById('project-card');
     if (card) {
       const cardHeader = card.querySelector('.card-header');
       const cardBody = card.querySelector('.card-body');
     }
     
-    // Work section hover effect from the provided code
+    // Work section hover effect
     const workItems = document.querySelectorAll('.work-item');
     const work = document.querySelector('.work');
     const overlay = document.querySelector('.overlay');
@@ -125,9 +194,11 @@ if (document.body) {
     }
   
     function removeActiveClass() {
-      prevElements.forEach((prev) => {
-        prev.classList.remove('active');
-      });
+      if (prevElements.length > 0) {
+        prevElements.forEach((prev) => {
+          prev.classList.remove('active');
+        });
+      }
     }
   
     if (workItems.length > 0 && work && overlay) {
@@ -176,54 +247,10 @@ if (document.body) {
         });
       });
     }
-  });
-  
-  // Keep scroll to top on reload but don't show loader
-  window.onbeforeunload = function() {
-    // Just scroll to top without showing the loader
-    window.scrollTo(0, 0);
-    return null;
-  };
-  
-  // Mousemove effect for shapes and tracker
-  document.addEventListener('mousemove', function(e) {
-    const shapes = document.querySelectorAll('.shape');
-    const tracker = document.querySelector('.tracker');
-  
-    if (tracker) {
-      tracker.style.top = `${e.clientY}px`;
-      tracker.style.left = `${e.clientX}px`;
-      tracker.style.opacity = 1;
-    }
-  
-    shapes.forEach((shape) => {
-      const shapeOffset = shape.getAttribute('data-offset');
-      if (shapeOffset) {
-        let offsetX = (window.innerWidth - e.clientX) * shapeOffset;
-        let offsetY = (window.innerHeight - e.clientY) * shapeOffset;
-        shape.style.translate = `${offsetX}px ${offsetY}px`;
-      }
-    });
-  });
-  
-  // Parallax scrolling effect for tabs
-  const listTab = document.querySelectorAll('.tab');
-  if (listTab.length > 0) {
-    window.addEventListener('scroll', () => {
-      let top = window.scrollY;
-  
-      listTab.forEach((tab) => {
-        if (tab.offsetTop - top < 550) {
-          tab.classList.add('active');
-        } else {
-          tab.classList.remove('active');
-        }
-      });
-    });
   }
   
-  // Tooltip hover effect
-  document.addEventListener('DOMContentLoaded', function() {
+  // Function to handle tooltips
+  function setupTooltips() {
     const hoverBlocks = document.querySelectorAll('.hover-block');
     const tooltip = document.getElementById('tooltip');
   
@@ -234,7 +261,7 @@ if (document.body) {
           const mouseY = e.clientY;
           const tooltipMessage = hoverBlock.getAttribute('data-tooltip');
   
-          tooltip.innerHTML = tooltipMessage;
+          tooltip.innerHTML = tooltipMessage || '';
           tooltip.style.left = `${mouseX + 30}px`;
           tooltip.style.top = `${mouseY + 50}px`;
           tooltip.classList.add('visible');
@@ -245,8 +272,10 @@ if (document.body) {
         });
       });
     }
+  }
   
-    // Mobile menu toggle
+  // Function to handle mobile menu
+  function setupMobileMenu() {
     const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
     const navbar = document.querySelector('.navbar');
   
@@ -255,4 +284,4 @@ if (document.body) {
         navbar.classList.toggle('active');
       });
     }
-  });
+  }
