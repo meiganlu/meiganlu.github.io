@@ -1443,7 +1443,7 @@ body {
 }
 
 /* iPhone XR specific media query (414px width) */
-@media (min-width: 370px) and (max-width: 420px) {
+@media (min-width: 370px) and (max-width: 440px) {
     body.home, 
     .home,
     section.showcase {
