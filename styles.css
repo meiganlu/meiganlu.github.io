@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;800&display=swap");
 
-/************* HOME PAGE *************/
-
 :root {
     --light-color: #ffffff;
     --dark-color: #060606;
@@ -91,11 +89,6 @@ footer {
     transform-origin: center; 
 }
 
-.logo-image {
-    width: 3.5rem;
-    margin-inline: auto;
-}
-
 .navbar {
     position: fixed;
     top: 20px;
@@ -146,31 +139,15 @@ footer {
     text-align: center;
 }
 
-.subtitle {
-    font-size: 2.75vw;
-    padding-bottom: 3rem;
-}
-
 .description {
     padding-block: 3rem;
     margin-top: 4rem;
     background-color: transparent;
 }
 
-.cta {
-    display: block;
-    padding-bottom: 1rem;
-}
-
-/*** UTILITY CLASSES ***/
-.sm-hidden {
-    display: none;
-}
-
 .overflow-hidden {
     overflow: hidden;
 }
-/*** UTILITY CLASSES END ***/
 
 /************* WORK EXPERIENCE SECTION *************/
 
@@ -193,11 +170,6 @@ footer {
 .animation-show.animate { 
     opacity: 1; 
     transform: translateY(0); 
-}
-
-/* Opener styling */
-.opener {
-    visibility: hidden;
 }
 
 body.preload * {
@@ -287,11 +259,6 @@ body.preload * {
     color: #2b2b2b;
 }
 
-.btns {
-    padding-left: 1rem;
-}
-
-/* Header */
 header {
     position: relative;
     left: 0;
@@ -300,42 +267,10 @@ header {
     height: 80px;
 }
 
-/* Logo and opener */
-.logo-header {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.logo {
-    position: relative;
-    display: inline-block;
-    bottom: -20px;
-    opacity: 0;
-    color: #ffffff;
-    font-size: 8rem;
-    font-weight: 100;
-    text-align: center;
-}
-
-.logo.active {
-    bottom: 0;
-    opacity: 1;
-    transition: ease-in-out 0.45s;
-}
-
-.logo.fade {
-    bottom: 150px;
-    opacity: 0;
-    transition: ease-in-out 0.45s;
-}
-
 u {
     text-decoration: underline;
 }
 
-/* Projects section */
 .projects {
     background-color: #ffffff;
     display: flex;
@@ -367,7 +302,6 @@ u {
     transition: 0.5s;
 }
 
-/* Card styling */
 .card {
     width: 815px;
     height: 625px;
@@ -485,7 +419,6 @@ u {
     background-color: #59998E;
 }
 
-/* Image container */
 .img-container {
     width: 100%;
     height: 375px;
@@ -503,7 +436,6 @@ u {
     object-position: top center;
 }
 
-/* Card buttons */
 .card-buttons {
     display: flex;
     gap: 10px;
@@ -534,14 +466,12 @@ u {
     border-color: rgb(120, 120, 120);
 }
 
-/* Connect section */
 .connect {
     font-size: 3.5rem;
     margin-bottom: 4rem;
     font-weight: 400;
 }
 
-/* Timeline styling */
 .experience {
     max-width: 815px;
     margin: 0 auto;
@@ -652,28 +582,6 @@ u {
     transform: translateY(-1px);
 }
 
-/* Work items animation */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.metric-card {
-    animation: fadeInUp 0.5s ease-out forwards;
-    opacity: 0;
-}
-
-.metric-card:nth-child(1) { animation-delay: 0.1s; }
-.metric-card:nth-child(2) { animation-delay: 0.2s; }
-.metric-card:nth-child(3) { animation-delay: 0.3s; }
-
-/* Page loader */
 #page-loader {
     position: fixed;
     top: 0;
@@ -682,10 +590,9 @@ u {
     height: 100%;
     background-color: #fff;
     z-index: 9999;
-    display: none; /* Keep hidden by default */
+    display: none;
 }
 
-/* Project header */
 .project-header {
     font-size: 3.5rem;
     font-weight: 500;
@@ -704,7 +611,6 @@ u {
     background-color: #ffffff;
 }
 
-/* Tech stack section */
 .tech-stack-area {
     background-color: #ffffff;
     position: relative;
@@ -790,7 +696,6 @@ body {
     margin-top: 1rem;
 }
 
-/* Responsive media queries */
 @media screen and (min-width: 64em) {
     .showcase,
     .showcase > *:not(.link) {
@@ -812,46 +717,15 @@ body {
         width: 100%;
         text-align: center;
     }
-    
-    .logo1 {
-        grid-area: logo1;
-        margin: auto;
-    }
 
     .navbar {
         grid-area: navbar;
-    }
-
-    .link-dashboard {
-        grid-area: dashboard;
     }
 
     .title {
         grid-area: title;
         line-height: 1;
         pointer-events: none;
-    }
-
-    .subtitle {
-        grid-area: subtitle;
-        line-height: 1;
-        margin-top: 3.5rem;
-        font-weight: 20;
-        margin-bottom: 3rem;
-        padding-bottom: 3rem;
-    }
-
-    .vertical-text {
-        grid-area: newsletter;
-        font-size: 3vw;
-        justify-self: end;
-        color: #a583fb;
-    }
-
-    .vertical-text-inner {
-        writing-mode: vertical-lr;
-        transform: rotate(180deg);
-        padding-top: 50vw;
     }
 
     .description {
@@ -866,86 +740,6 @@ body {
         display: flex;
         align-self: center;
     }
-
-    .cta {
-        grid-area: cta;
-        align-self: center;
-        text-align: left;
-        font-size: 1.2vw;
-        padding-top: 4rem;
-        font-weight: 400;
-        color: #7953da;
-    }
-
-    .copyright {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .copyright-year {
-        grid-area: year;
-    }
-
-    .copyright-name {
-        grid-area: name;
-    }
-
-    /*** UTILITY CLASSES ***/
-    .sm-hidden {
-        display: block;
-    }
-    .xl-hidden {
-        display: none;
-    }
-
-    .location {
-        grid-area: location; /* Assigning to the grid area */
-        display: flex;
-        align-items: center;
-        justify-content: center; /* Center it horizontally */
-        margin-top: 1rem; /* Adjust spacing as needed */
-        font-size: 1.2rem; /* Adjust the font size as needed */
-    }
-
-    /*** UTILITY CLASSES END ***/
-
-    .shape {
-        position: absolute;
-        bottom: 10vh;
-        left: 25vw;
-        z-index: -1;
-        width: 10vw;
-        user-select: none;
-        -webkit-user-drag: none;
-        transform-origin: bottom left;
-        opacity: 0.45;
-    }
-
-    .shape-rg {
-        opacity: 0.6;
-        bottom: 0;
-        left: 0;
-        width: 12vw;
-        transform-origin: bottom left;
-    }
-
-    .shape-md {
-        opacity: 0.55;
-        top: 2.5vh;
-        left: 2.5vw;
-        width: 15vw;
-        transform-origin: top;
-    }
-
-    .shape-lg {
-        opacity: 0.65;
-        top: 25vh;
-        right: -10vw;
-        left: auto;
-        width: 70vw;
-        transform-origin: bottom right;
-    }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -958,110 +752,11 @@ body {
         animation-fill-mode: forwards;
         animation-timing-function: cubic-bezier(0.37, 0, 0.63, 1);
     }
-
-    .shape {
-        scale: 0;
-        animation-name: scaleIn;
-        animation-duration: 0.25s;
-        transition: translate 0.25s;
-    }
-
-    .scale-rotate {
-        scale: 0;
-        animation-name: scaleRotate;
-        animation-duration: 0.5s;
-    }
-
-    @keyframes grain {
-        0%,
-        100% {
-            transform: translate(0);
-        }
-        10% {
-            transform: translate(-5%, -10%);
-        }
-        20% {
-            transform: translate(-15%, 5%);
-        }
-        30% {
-            transform: translate(7%, -25%);
-        }
-        40% {
-            transform: translate(-5%, 25%);
-        }
-        50% {
-            transform: translate(-15%, 5%);
-        }
-        60% {
-            transform: translate(15%);
-        }
-        70% {
-            transform: translateY(15%);
-        }
-        80% {
-            transform: translate(3%, 35%);
-        }
-        90% {
-            transform: translate(-10%, 10%);
-        }
-    }
-
-    @keyframes toRight {
-        from {
-            opacity: 1;
-            transform: translateX(-100%);
-        }
-        to {
-            opacity: 1;
-            transform: none;
-        }
-    }
-
-    @keyframes toBottom {
-        from {
-            opacity: 1;
-            transform: translateY(-100%);
-        }
-        to {
-            opacity: 1;
-            transform: none;
-        }
-    }
-
-    @keyframes scaleIn {
-        from {
-            scale: 0;
-        }
-        to {
-            scale: 1;
-        }
-    }
-
-    @keyframes scaleRotate {
-        from {
-            scale: 0;
-            rotate: 60deg;
-        }
-        to {
-            scale: 1;
-            rotate: 0deg;
-        }
-    }
 }
-
-
-
-
-
-
-
-
-
-
 
 /**** RESPONSIVE BREAKPOINTS ****/
 
-/* Large desktop screens (2250px+ and tall) */
+/* Large desktop screens (2250px+) */
 @media (min-width: 2250px) and (min-height: 1200px) { 
     .title {
         height: 54vh;
@@ -1433,12 +1128,13 @@ body {
     
     .end {
         margin: 0 1.5rem;
-        padding: 4rem 0 6rem;
+        padding: 5rem 0 6rem;
     }
     
     .connect {
         font-size: 2rem;
-        margin-bottom: 3rem;
+        margin-left: 1.8rem;
+        margin-right: 1.8rem;
     }
 }
 
@@ -1628,6 +1324,17 @@ body {
     .tech-item p {
         font-size: 1.1rem;
     }
+
+    .end {
+        margin: 0 1.5rem;
+        padding: 4rem 0 8rem;
+    }
+    
+    .connect {
+        font-size: 2rem;
+        margin-left: 1.8rem;
+        margin-right: 1.8rem;
+    }
 }
 
 /* iPhone XR landscape mode */
@@ -1652,7 +1359,6 @@ body {
 
 /* Additional mobile fixes */
 @media (max-width: 480px) {
-    /* Ensure the navbar is always centered no matter what */
     .navbar {
         position: fixed;
         width: auto;
@@ -1661,17 +1367,14 @@ body {
         transform: translateX(-50%);
     }
     
-    /* Fixed background gradient */
     .home {
         background: radial-gradient(circle at top center, rgba(152, 47, 223, 0.25), rgba(125, 73, 247, 0) 75%), #ffffff !important;
     }
     
-    /* Make sure sections have consistent spacing */
     .space {
         padding-bottom: 2rem;
     }
     
-    /* Section headers */
     .project-header, .subsection-title {
         margin-left: auto;
         margin-right: auto;
@@ -1679,7 +1382,6 @@ body {
         text-align: left;
     }
     
-    /* Projects container */
     .projects {
         gap: 2rem;
         padding-bottom: 2rem;
