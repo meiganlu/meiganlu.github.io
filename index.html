@@ -6,23 +6,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Meigan Lu</title>
         <link rel="stylesheet" href="./styles.css" />
-        <script src="./app.js" defer></script>
         <script src="https://kit.fontawesome.com/cc56f14920.js" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/@phosphor-icons/web"></script>
+        <script src="./app.js" defer></script>
     </head>
     <body class="home">
-        <!--<div class="opener">
+        <!-- The loader should be a separate element at the top level -->
+        <div id="page-loader">
+            <div class="loader-spinner"></div>
+        </div>
+        
+        <!-- <div class="opener">
             <h1 class="logo-header">
                 <span class="logo">Wel</span><span class="logo">come&nbsp;:)</span>
             </h1>
-        </div>-->
+        </div> -->
+        
         <!--- NAVIGATION BAR --->
         <nav class="navbar vertical-center line line-vertical">
             <ul>
                 <li><a href="./index.html" class="link">Home</a></li>
                 <li><a href="./about.html" class="link">About</a></li>
-                <li><a href="https://github.com/meiganlu" class="link">GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/meigan-lu/" class="link">LinkedIn</a></li>
+                <li><a href="https://github.com/meiganlu" class="link" target="_blank">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/meigan-lu/" class="link" target="_blank">LinkedIn</a></li>
                 <!-- <li><a href="./assets/images/Resume — Lu, Meigan.pdf" class="link">RESUME</a></li> -->
             </ul>                           
         </nav>
@@ -30,314 +36,206 @@
         <!---------- TOP OF THE PAGE, HEADER PAGE ---------->
         <div class="tracker"></div>
         <section class="showcase overflow-hidden">
-
             <!--- DESCRIPTION --->
-            <h1 class="title line line-horizontal overflow-hidden">
+            <h1 class="title line line-horizontal overflow-hidden animation-show">
                 <span class="has-in-common" style="font-weight: 300">HI, I'M 
-                    <span style="color: #a855f7; font-weight: 400">MEIGAN</span>.</span>
-                <span class="has-in-common"><span style="--delay: 0.8s; color: #8b5cf6; font-weight: 300">FULL-STACK</span>
-                    <span style="font-weight: 300"> DEVELOPER &</span></span>
+                    <span style="color: #a855f7; font-weight: 400">MEIGAN</span>.
+                </span>
+                <!-- <span class="has-in-common">
+                    <span style="--delay: 0.8s; color: #8b5cf6; font-weight: 300">FULL-STACK</span>
+                    <span style="font-weight: 300"> DEVELOPER.</span>
+                </span> -->
                 <span class="has-in-common">
                     <span style="background: linear-gradient(90deg, #d946ef, #8b5cf6); -webkit-background-clip: text;
-                        background-clip: text; -webkit-text-fill-color: transparent; font-weight: 400">AI </span>
-                    <span style="font-weight: 300">ENTHUSIAST.</span>
+                        background-clip: text; -webkit-text-fill-color: transparent; font-weight: 400">FULL-STACK </span>
+                    <span style="font-weight: 300">DEVELOPER.</span>
                 </span>
             </h1>
-
-            <div class="description line line-horizontal">
-                <span class="button"><span class="area live pulse"></span>DAVIS, CA</span></span>
+            
+            <div class="description line line-horizontal animation-show">
+                <span class="button"><span class="area live pulse"></span>DAVIS, CA</span>
                 <p class="overflow-hidden">  
                     <span class="main-body" style="--delay: 0.75s">
-                        <span class="grabber has-in-common">I love building projects that are
-                            <span style="color:#a855f7">useful</span>, <br><span style="color:#8b5cf6">functional</span>, and 
+                        <span class="grabber has-in-common">I like to build projects that are
+                            <span style="color:#a855f7">efficient</span>, <span style="color:#8b5cf6">functional</span>,<br>and
                             <span style="background: linear-gradient(90deg, #d946ef, #8b5cf6); -webkit-background-clip: text;
-                                background-clip: text; -webkit-text-fill-color: transparent">actually make a difference</span>.
+                                background-clip: text; -webkit-text-fill-color: transparent"> user-centric</span>.
                         </span>
                     </span>
                 </p>
-            </div>
+            </div>            
         </section>
     </body>
 
     <body>
-        <!---------- SLIDER CAROUSEL ---------->
-        <!--<section class="slider">
-            <div class="slider" reverse="true" style="--width: 475px; --height: 250px; --quantity: 4;">
-                <div class="list">
-                    <div class="item" style="--position: 1"><img src="./assets/images/Group 72.png" alt=""></div>
-                    <div class="item" style="--position: 2"><img src="./assets/images/Group 71.png" alt=""></div>
-                    <div class="item" style="--position: 3"><img src="./assets/images/Group 71.png" alt=""></div>
-                    <div class="item" style="--position: 4"><img src="./assets/images/Group 71.png" alt=""></div>
-                </div>
-            </div>
-        </section>-->
-
         <!---------- WORK EXPERIENCE SECTION ---------->
         <section class="main">
-            <div class="tab intro">
-                <h2 class="animation-show">My Work Experience</h2>
-                <p class="animation-show">
-                    In my previous roles, I found myself navigating two distinct positions that highlighted the intersection between 
-                    computer software and hardware, and the amount of intricate detail that goes into bridging the two together. I had always known that 
-                    software development was demanding on its own, but these experiences introduced me to a whole new side—one that was 
-                    unsurprisingly challenging yet incredibly fulfilling to navigate, especially with the help of others.
-
-                    <br><br>Both companies had their own individual missions, but they embodied my <span style="font-weight:600; color:#000">core values</span> as a developer: 
-                    having a team-savvy spirit, a passion for collaborative learning, and a commitment to enhancing the experience of 
-                    people they directly impact. It's this commitment to making a positive difference, even in the face of difficulty, that 
-                    continues to drive my love for this field.
-                </p>
-                <!--<a href="#experience" class="btn">Learn More</a>-->
-                <!-- <img src="./assets/images/Group 37.png" class=" tab main-sticker sticker-animation"></img> -->
-            </div>
-
-            <div class="tab groq">
-                <h2 class="animation-show">Groq Summer 2024 Internship</h2>
-                <h3 class="animation-show">NPI Test Development Engineer Intern (July — Sept)</h3>
-                <p class="animation-show">
-                    AI is the new modern age of technology, and Groq is at the forefront. I am extremely grateful to have been given 
-                    the opportunity to work at a startup company that is making momentous change in its industry. My role as an NPI Test
-                    Development Engineer Intern has allowed me to work alongside a senior engineer to develop and implement test suites. <!--to enhance test coverage, identify anomalies, and validate quality standards for serviceability.-->
-                    
-                    <br><br><u style="background-color: #eae2fc">Key Responsibilities:</u>
-                    <br>&#8226; Worked with <span style="font-weight:600">Python</span> and <span style="font-weight:600">open-source Linux</span>
-                    <br>&#8226; Developed and debugged automated testing programs for GroqCard accelerators to streamline software and firmware configuration, enhance test coverage, identify anomalies, and 
-                    validate quality standards for serviceability
-
-                    <br><br><i class="disclaimer">Disclaimer: The information and image used are 
-                    publicly available and have been chosen with care and intent.</i>
-                </p>
-                <!--<a href="#experience" class="btn">Learn More</a>-->
-                <img src="./assets/images/Group 44 (1).png" class=" tab groq-sticker animation-show"></img>
-            </div>
-
-            <div class="tab comptechs">
-                <h2 class="animation-show">CompTechS Fall 2022 Internship</h2>
-                <h3 class="animation-show">Computer Technical Support Intern (Oct — Dec)</h3>
-                <p class="animation-show">
-                    At the heart of every community are programs and individuals that want to give back to others. That was CompTechS
-                    to scholarship students and other impacted individuals in the greater Bay Area and beyond.
-
-                    <br><br>One of the most valuable lessons I've learned through my experience
-                    is that everyone has a need for accessible technology—one that is reliable and efficient. My role gave me the 
-                    opportunity to work with a team of dedicated students and faculty to restore reclaimed laptops back to their near-original state &#40both on the software
-                    and hardware side&#41.
-
-                    <br><br><u style="background-color: #d0eee9">Key Responsibilities:</u>
-                    <br>&#8226; Worked with <span style="font-weight:600">Microsoft Windows</span>
-                    <br>&#8226; Executed memory and hard drive optimizations, and conducted performance tuning and comprehensive health checks post-software configuration                  
-                </p>
-                <!--<a href="#experience" class="btn">Learn More</a>-->
-                <div class="space">Hello</div>
-                <img src="./assets/images/Group 54.png" class="tab comptechs-sticker animation-show"></img>
-            </div>
-
-            <!--<div class="tab intro">
-                <h2 class="animation-show">My Projects</h2>
-                <p class="animation-show">
-                    My interests in computer science have been honed through my real-world and academic experiences as well as 
-                    my own personal projects. The evolution of my skills and design goals throughout the years has evolved to 
-                    become more user-centric and interactive without every compromising the true mission of the project. As I continue
-                    to get hands-on experience in fast-paced environments, I am excited to see how my projects will continue to evolve and grow
-                    as I do.
-                </p>
-                <a href="projects" class="btn">Learn More</a>
-                <img src="./assets/images/Group 57.png" class=" tab main-sticker sticker-animation"></img>
-            </div>-->
+            <h3 class="project-header">Work Experience</h3>
+            <section class="experience">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">OCT 2024 — PRESENT</div>
+                            <div class="timeline-title">Groq</div>
+                            <div class="timeline-role">Cloud Inference Intern</div>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Rust</span>
+                                <span class="tech-tag">Test Automation</span>
+                                <span class="tech-tag">CI/CD</span>
+                            </div>
+                            
+                            <!-- <div class="timeline-description">
+                                <ul>
+                                    <li>Developed and debugged automated testing programs for GroqCard accelerators using Python and open-source Linux to streamline software and firmware configuration</li>
+                                </ul>
+                            </div> -->
+                        </div>
+                    </div>
+            
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">JULY 2024 — SEPT 2024</div>
+                            <div class="timeline-title">Groq</div>
+                            <div class="timeline-role">NPI Test Development Engineer Intern</div>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Test Automation</span>
+                            </div>
+                            
+                            <div class="timeline-description">
+                                <ul>
+                                    <li>Developed and debugged automated testing programs for GroqCard accelerators using Python and open-source Linux to streamline software and firmware configuration</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </section>
 
         <div class="space">Hello</div>
-        <section class="projects3">
-            <div class="cont">
-                <div class="work">
-                    <div class="overlay">
-                        <div class="prev" id="prev-1">
-                            <!--<img src="./assets/images/exp.jpg" alt="">-->
+        
+        <section class="projects-section">
+            <h3 class="project-header">Featured Projects</h3>
+            <section class="projects">
+                <div class="card p1" id="project-card">
+                    <div class="card-header">
+                        <div class="traffic-lights">
+                            <div class="light red"></div>
+                            <div class="light yellow"></div>
+                            <div class="light green"></div>
                         </div>
-                        <div class="prev" id="prev-2">
-                            <!--<img src="./assets/images/exp.jpg" alt="">-->
-                        </div>
-                        <div class="prev" id="prev-3">
-                            <!--<img src="./assets/images/Group 75.png" alt="">-->
-                        </div>
-                    </div>
-
-                    <p>My Projects</p>
-                    <div class="tooltip" id="tooltip"></div>
-                    <div class="work-item hover-block" id="w-1" data-tooltip="Details on this website's layout and design">
-                        <div class="work-item-name">
-                            <h1>Personal Website <span style="font-size: 2rem; text-align: right;">&ensp; HTML/CSS, Javascript, Figma</span></h1>
-                        </div>
-                        <div class="work-item-icon">
-                            <div class="icon-holder i-1">
-                                <i class="ph-bold ph-arrow-right"></i>
-                            </div>
-                            <div class="icon-holder i-2">
-                                <i class="ph-bold ph-arrow-right"></i>
-                            </div>
+                        <div class="tabs">
+                            <div class="tab"></div>
+                            <div class="tab1"></div>
+                            <div class="tab1"></div>
                         </div>
                     </div>
-
-                    <div class="work-item hover-block" id="w-2" data-tooltip="An auto-dimming headlights and object detection automation prototype">
-                        <div class="work-item-name">
-                            <h1>Automation Detection System <span style="font-size: 2rem">&ensp; C++, Git, Arduino</span></h1>
-                        </div>
-                        <div class="work-item-icon">
-                            <div class="icon-holder i-1">
-                                <i class="ph-bold ph-arrow-right"></i>
-                            </div>
-                            <div class="icon-holder i-2">
-                                <i class="ph-bold ph-arrow-right"></i>
-                            </div>
-                        </div>
+                    <div class="img-container">
+                        <img src="/assets/images/studybites.png"/>
                     </div>
-
-                    <div class="work-item hover-block" id="w-3" data-tooltip="An interactive grocery store interface and directory">
-                        <div class="work-item-name">
-                            <h1>Megamart <span style="font-size: 2rem">&ensp; Java</span></h1>
-                        </div>
-                        <div class="work-item-icon">
-                            <div class="icon-holder i-1">
-                                <i class="ph-bold ph-arrow-right"></i>
-                            </div>
-                            <div class="icon-holder i-2">
-                                <i class="ph-bold ph-arrow-right"></i>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!--<div class="cta1">
-                        <button onclick="window.location.href='projects';" style="font-family: Quicksand;">View all work</button>
-                    </div>-->
-                </div>
-            </div>
-        </section>
-
-         <!---------- FLIP-CARD SECTION ---------->
-         <section class="lang">
-            <div class="card">
-                <div class="card-container">
-
-                    <!--- FLIP-CARD 1 --->
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <article class="card-article c1"></article>
-                            </div>
-                            <div class="flip-card-back">
-                                <article class="card-article c9"></article>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--- FLIP-CARD 2 --->
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <article class="card-article c2"></article>
-                            </div>
-                            <div class="flip-card-back">
-                                <div class="flip-card-front">
-                                    <article class="card-article c10"></article>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--- FLIP-CARD 3 --->
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <article class="card-article c3"></article>
-                            </div>
-                            <div class="flip-card-back">
-                                <div class="flip-card-front">
-                                    <article class="card-article c11"></article>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--- FLIP-CARD 4 --->
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <article class="card-article c4"></article>
-                            </div>
-                            <div class="flip-card-back">
-                                <div class="flip-card-front">
-                                    <article class="card-article c12"></article>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--- FLIP-CARD 5 --->
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <article class="card-article c5"></article>
-                            </div>
-                            <div class="flip-card-back">
-                                <div class="flip-card-front">
-                                    <article class="card-article c13"></article>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--- FLIP-CARD 6 --->
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <article class="card-article c6"></article>
-                            </div>
-                            <div class="flip-card-back">
-                                <div class="flip-card-front">
-                                    <article class="card-article c14"></article>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--- FLIP-CARD 7 --->
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <article class="card-article c7"></article>
-                            </div>
-                            <div class="flip-card-back">
-                                <div class="flip-card-front">
-                                    <article class="card-article c15"></article>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--- FLIP-CARD 8 --->
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <article class="card-article c8"></article>
-                            </div>
-                            <div class="flip-card-back">
-                                <div class="flip-card-front">
-                                    <article class="card-article c16"></article>
-                                </div>
-                            </div>
+                    <div class="card-body">
+                        <h1 class="card-title">StudyBites</h1>
+                        <div class="info-text">A tool to streamline and optimize finding the perfect local study spot.</div>
+                        <div class="project-tech-stack">React</div>
+                        <div class="project-tech-stack">Next.js</div>
+                        <div class="project-tech-stack">TypeScript</div>
+                        <div class="project-tech-stack">Tailwind CSS</div>
+                        <div class="project-tech-stack">Google API</div>
+                        <div class="card-buttons">
+                            <a href="https://github.com/meiganlu/StudyBites" target="_blank" class="btn btn-btn">
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://studybites-opal.vercel.app/" target="_blank" class="btn btn-btn">
+                                <span>Live</span>
+                            </a>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </section>
+
+        <div class="space">Hello</div>
+
+        <section class="work-section">
+            <h3 class="project-header">My Skills</h3>
+            <h3 class="subsection-title">Programming Languages</h3>
+            <section class="tech-stack-area">
+                <div class="tech-wrapper">
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-plain.svg" alt="Java" class="tech-icon">
+                            <p>Java</p>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/python.svg" alt="Python" class="tech-icon">
+                            <p>Python</p>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/cplusplus.svg" alt="C++" class="tech-icon">
+                            <p>C++</p>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/rust.svg" alt="Rust" class="tech-icon">
+                            <p>Rust</p>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/go.svg" alt="Go" class="tech-icon">
+                            <p>Go</p>
+                        </div>
+
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/typescript.svg" alt="TypeScript" class="tech-icon">
+                            <p>TypeScript</p>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/javascript.svg" alt="JavaScript" class="tech-icon">
+                            <p>JavaScript</p>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/html5.svg" alt="HTML" class="tech-icon">
+                            <p>HTML</p>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/css3.svg" alt="CSS" class="tech-icon">
+                            <p>CSS</p>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/tailwindcss.svg" alt="Tailwind CSS" class="tech-icon">
+                            <p>Tailwind CSS</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <h3 class="subsection-title">Libraries & Frameworks</h3>
+            <section class="tech-stack-area">
+                <div class="tech-wrapper">
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/nextdotjs.svg" alt="Next.js" class="tech-icon">
+                            <p>Next.js</p>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/react.svg" alt="React" class="tech-icon">
+                            <p>React</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <div class="space">Hello</div>
 
         <section class="main">
-            <div class="tab end contact-btn">
-                <a href=mailto:meiganlu@gmail.com?body=I%20look%20forward%20to%20getting%20to%20know%20you!><p class="has-in-common" 
-                    data-offset=".05" style="--delay: 1s">Are you interested in learning more? 
-                    <br>If so, please reach out!</p></a>
-            </div>
+            <section class="end">
+                <h1 class="connect">I'm always interested in new projects and opportunities. Reach out and I'll try my best to get back to you!</h1>
+                <a href="mailto:meiganlu@gmail.com?body=I%20look%20forward%20to%20getting%20to%20know%20you!" class="contact-button">
+                    Let's connect!
+                </a>
+            </section>
         </section>
 
         <!---------- FOOTER ---------->
