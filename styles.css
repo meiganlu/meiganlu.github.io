@@ -467,7 +467,7 @@ u {
 }
 
 .connect {
-    font-size: 3.5rem;
+    font-size: 2.75rem;
     margin-bottom: 4rem;
     font-weight: 400;
 }
@@ -594,7 +594,7 @@ u {
 }
 
 .project-header {
-    font-size: 3.5rem;
+    font-size: 2.75rem;
     font-weight: 500;
     color: #362363;
     background-color: #ffffff;
@@ -687,7 +687,7 @@ body {
 }
 
 .subsection-title {
-    font-size: 1.75rem;
+    font-size: 1.55rem;
     font-weight: 500;
     color: #362363c0;
     background-color: #ffffff;
