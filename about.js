@@ -1,4 +1,3 @@
-// Tooltip hover effect
 const hoverBlocks = document.querySelectorAll('.hover-block');
 const tooltip = document.getElementById('tooltip');
 

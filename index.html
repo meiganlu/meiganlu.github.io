@@ -1,241 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Meigan Lu</title>
-        <link rel="stylesheet" href="./styles.css" />
-        <script src="https://kit.fontawesome.com/cc56f14920.js" crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/@phosphor-icons/web"></script>
-        <script src="./app.js" defer></script>
-    </head>
-    <body class="home">
-        <div id="page-loader">
-            <div class="loader-spinner"></div>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meigan Lu</title>
+
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://kit.fontawesome.com/cc56f14920.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="./app.js" defer></script>
+</head>
+
+<body class="home">
+    <div id="page-loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- NAV BAR -->
+    <nav class="navbar vertical-center">
+        <ul>
+            <li><a href="./index.html" class="link">Home</a></li>
+            <li><a href="./about.html" class="link">About</a></li>
+            <li><a href="https://github.com/meiganlu" class="link" target="_blank">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/meigan-lu/" class="link" target="_blank">LinkedIn</a></li>
+        </ul>
+    </nav>
+
+    <!-- HEADER -->
+    <section class="showcase overflow-hidden">
+        <h1 class="title line line-horizontal overflow-hidden animation-show">
+            <span class="has-in-common" style="font-weight: 300">HI, I'M 
+                <span style="color: #a855f7; font-weight: 400">MEIGAN</span>.
+            </span>
+            <span class="has-in-common">
+                <span style="background: linear-gradient(90deg, #d946ef, #8b5cf6); 
+                -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-weight: 400">
+                    FULL-STACK 
+                </span>
+                <span style="font-weight: 300">DEVELOPER.</span>
+            </span>
+        </h1>
+
+        <div class="description line line-horizontal animation-show">
+            <span class="button"><span class="area live pulse"></span>DAVIS, CA</span>
+            <p class="overflow-hidden">  
+                <span class="main-body" style="--delay: 0.75s">
+                    <span class="grabber has-in-common">I like to build projects that are
+                        <span style="color:#a855f7">efficient</span>, <span style="color:#8b5cf6">functional</span>,
+                        <br>and 
+                        <span style="background: linear-gradient(90deg, #d946ef, #8b5cf6); 
+                        -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent">
+                            user-centric
+                        </span>.
+                    </span>
+                </span>
+            </p>
+        </div>
+    </section>
+
+    <!-- WORK EXPERIENCE -->
+    <section class="main">
+        <h3 class="project-header">Work Experience</h3>
+        <section class="experience">
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">OCT 2024 — PRESENT</div>
+                        <div class="timeline-title">Groq</div>
+                        <div class="timeline-role">Cloud Inference Intern</div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Rust</span>
+                            <span class="tech-tag">Test Automation</span>
+                            <span class="tech-tag">CI/CD</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">JULY 2024 — SEPT 2024</div>
+                        <div class="timeline-title">Groq</div>
+                        <div class="timeline-role">NPI Test Development Engineer Intern</div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Test Automation</span>
+                        </div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Developed and debugged automated testing programs for GroqCard accelerators using Python and Linux to streamline firmware configuration.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <div class="space">Hello</div>
+
+    <!-- PROJECTS -->
+    <section class="projects-section">
+        <h3 class="project-header">Featured Projects</h3>
+        <section class="projects">
+            <div class="card p1" id="project-card">
+                <div class="card-header">
+                    <div class="traffic-lights">
+                        <div class="light red"></div>
+                        <div class="light yellow"></div>
+                        <div class="light green"></div>
+                    </div>
+                    <div class="tabs">
+                        <div class="tab"></div>
+                        <div class="tab1"></div>
+                        <div class="tab1"></div>
+                    </div>
+                </div>
+                <div class="img-container">
+                    <img src="/assets/images/studybites.png" alt="StudyBites Screenshot" />
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title">StudyBites</h1>
+                    <div class="info-text">A tool to streamline and optimize finding the perfect local study spot.</div>
+                    <div class="project-tech-stack">React</div>
+                    <div class="project-tech-stack">Next.js</div>
+                    <div class="project-tech-stack">TypeScript</div>
+                    <div class="project-tech-stack">Tailwind CSS</div>
+                    <div class="project-tech-stack">Google API</div>
+                    <div class="card-buttons">
+                        <a href="https://github.com/meiganlu/StudyBites" target="_blank" class="btn btn-btn">GitHub</a>
+                        <a href="https://studybites-opal.vercel.app/" target="_blank" class="btn btn-btn">Live</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <div class="space">Hello</div>
+
+    <!-- TECH STACK -->
+    <section class="work-section">
+        <h3 class="project-header">Tech Stack</h3>
+        
+        <div class="tech-section">
+            <h3 class="subsection-title">Programming Languages</h3>
+            <div class="tech-wrapper">
+                <div id="blob-frameworks" class="blob-effect"></div>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-icon-container">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-plain.svg" alt="Java" class="tech-icon">
+                        </div>
+                        <p>Java</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon-container">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/python.svg" alt="Python" class="tech-icon">
+                        </div>
+                        <p>Python</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon-container">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/cplusplus.svg" alt="C++" class="tech-icon">
+                        </div>
+                        <p>C++</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon-container">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/rust.svg" alt="Rust" class="tech-icon">
+                        </div>
+                        <p>Rust</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon-container">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/go.svg" alt="Go" class="tech-icon">
+                        </div>
+                        <p>Go</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon-container">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/typescript.svg" alt="TypeScript" class="tech-icon">
+                        </div>
+                        <p>TypeScript</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon-container">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/javascript.svg" alt="Tailwind CSS" class="tech-icon">
+                        </div>
+                        <p>Javascript</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon-container">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/html5.svg" alt="Tailwind CSS" class="tech-icon">
+                        </div>
+                        <p>HTML</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon-container">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/css3.svg" alt="Tailwind CSS" class="tech-icon">
+                        </div>
+                        <p>CSS</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon-container">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/tailwindcss.svg" alt="Tailwind CSS" class="tech-icon">
+                        </div>
+                        <p>Tailwind CSS</p>
+                    </div>
+                </div>
+            </div>
         </div>
         
-        <!--- NAVIGATION BAR --->
-        <nav class="navbar vertical-center line line-vertical">
-            <ul>
-                <li><a href="./index.html" class="link">Home</a></li>
-                <li><a href="./about.html" class="link">About</a></li>
-                <li><a href="https://github.com/meiganlu" class="link" target="_blank">GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/meigan-lu/" class="link" target="_blank">LinkedIn</a></li>
-                <!-- <li><a href="./assets/images/Resume — Lu, Meigan.pdf" class="link">RESUME</a></li> -->
-            </ul>                           
-        </nav>
-        
-        <!---------- TOP OF THE PAGE, HEADER PAGE ---------->
-        <div class="tracker"></div>
-        <section class="showcase overflow-hidden">
-            <!--- DESCRIPTION --->
-            <h1 class="title line line-horizontal overflow-hidden animation-show">
-                <span class="has-in-common" style="font-weight: 300">HI, I'M 
-                    <span style="color: #a855f7; font-weight: 400">MEIGAN</span>.
-                </span>
-                <!-- <span class="has-in-common">
-                    <span style="--delay: 0.8s; color: #8b5cf6; font-weight: 300">FULL-STACK</span>
-                    <span style="font-weight: 300"> DEVELOPER.</span>
-                </span> -->
-                <span class="has-in-common">
-                    <span style="background: linear-gradient(90deg, #d946ef, #8b5cf6); -webkit-background-clip: text;
-                        background-clip: text; -webkit-text-fill-color: transparent; font-weight: 400">FULL-STACK </span>
-                    <span style="font-weight: 300">DEVELOPER.</span>
-                </span>
-            </h1>
-            
-            <div class="description line line-horizontal animation-show">
-                <span class="button"><span class="area live pulse"></span>DAVIS, CA</span>
-                <p class="overflow-hidden">  
-                    <span class="main-body" style="--delay: 0.75s">
-                        <span class="grabber has-in-common">I like to build projects that are
-                            <span style="color:#a855f7">efficient</span>, <span style="color:#8b5cf6">functional</span>,<br>and
-                            <span style="background: linear-gradient(90deg, #d946ef, #8b5cf6); -webkit-background-clip: text;
-                                background-clip: text; -webkit-text-fill-color: transparent"> user-centric</span>.
-                        </span>
-                    </span>
-                </p>
-            </div>            
-        </section>
-    </body>
-
-    <body>
-        <!---------- WORK EXPERIENCE SECTION ---------->
-        <section class="main">
-            <h3 class="project-header">Work Experience</h3>
-            <section class="experience">
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">OCT 2024 — PRESENT</div>
-                            <div class="timeline-title">Groq</div>
-                            <div class="timeline-role">Cloud Inference Intern</div>
-                            <div class="tech-stack">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Rust</span>
-                                <span class="tech-tag">Test Automation</span>
-                                <span class="tech-tag">CI/CD</span>
-                            </div>
-                            
-                            <!-- <div class="timeline-description">
-                                <ul>
-                                    <li>Developed and debugged automated testing programs for GroqCard accelerators using Python and open-source Linux to streamline software and firmware configuration</li>
-                                </ul>
-                            </div> -->
-                        </div>
-                    </div>
-            
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">JULY 2024 — SEPT 2024</div>
-                            <div class="timeline-title">Groq</div>
-                            <div class="timeline-role">NPI Test Development Engineer Intern</div>
-                            <div class="tech-stack">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Test Automation</span>
-                            </div>
-                            
-                            <div class="timeline-description">
-                                <ul>
-                                    <li>Developed and debugged automated testing programs for GroqCard accelerators using Python and open-source Linux to streamline software and firmware configuration</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </section>
-
-        <div class="space">Hello</div>
-        
-        <section class="projects-section">
-            <h3 class="project-header">Featured Projects</h3>
-            <section class="projects">
-                <div class="card p1" id="project-card">
-                    <div class="card-header">
-                        <div class="traffic-lights">
-                            <div class="light red"></div>
-                            <div class="light yellow"></div>
-                            <div class="light green"></div>
-                        </div>
-                        <div class="tabs">
-                            <div class="tab"></div>
-                            <div class="tab1"></div>
-                            <div class="tab1"></div>
-                        </div>
-                    </div>
-                    <div class="img-container">
-                        <img src="/assets/images/studybites.png"/>
-                    </div>
-                    <div class="card-body">
-                        <h1 class="card-title">StudyBites</h1>
-                        <div class="info-text">A tool to streamline and optimize finding the perfect local study spot.</div>
-                        <div class="project-tech-stack">React</div>
-                        <div class="project-tech-stack">Next.js</div>
-                        <div class="project-tech-stack">TypeScript</div>
-                        <div class="project-tech-stack">Tailwind CSS</div>
-                        <div class="project-tech-stack">Google API</div>
-                        <div class="card-buttons">
-                            <a href="https://github.com/meiganlu/StudyBites" target="_blank" class="btn btn-btn">
-                                <span>GitHub</span>
-                            </a>
-                            <a href="https://studybites-opal.vercel.app/" target="_blank" class="btn btn-btn">
-                                <span>Live</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </section>
-
-        <div class="space">Hello</div>
-
-        <section class="work-section">
-            <h3 class="project-header">Tech Stack</h3>
-            <h3 class="subsection-title">Programming Languages</h3>
-            <section class="tech-stack-area">
-                <div class="tech-wrapper">
-                    <div class="tech-grid">
-                        <div class="tech-item">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-plain.svg" alt="Java" class="tech-icon">
-                            <p>Java</p>
-                        </div>
-                        <div class="tech-item">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/python.svg" alt="Python" class="tech-icon">
-                            <p>Python</p>
-                        </div>
-                        <div class="tech-item">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/cplusplus.svg" alt="C++" class="tech-icon">
-                            <p>C++</p>
-                        </div>
-                        <div class="tech-item">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/rust.svg" alt="Rust" class="tech-icon">
-                            <p>Rust</p>
-                        </div>
-                        <div class="tech-item">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/go.svg" alt="Go" class="tech-icon">
-                            <p>Go</p>
-                        </div>
-
-                        <div class="tech-item">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/typescript.svg" alt="TypeScript" class="tech-icon">
-                            <p>TypeScript</p>
-                        </div>
-                        <div class="tech-item">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/javascript.svg" alt="JavaScript" class="tech-icon">
-                            <p>JavaScript</p>
-                        </div>
-                        <div class="tech-item">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/html5.svg" alt="HTML" class="tech-icon">
-                            <p>HTML</p>
-                        </div>
-                        <div class="tech-item">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/css3.svg" alt="CSS" class="tech-icon">
-                            <p>CSS</p>
-                        </div>
-                        <div class="tech-item">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/tailwindcss.svg" alt="Tailwind CSS" class="tech-icon">
-                            <p>Tailwind CSS</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+        <div class="tech-section">
             <h3 class="subsection-title">Libraries & Frameworks</h3>
-            <section class="tech-stack-area">
-                <div class="tech-wrapper">
-                    <div class="tech-grid">
-                        <div class="tech-item">
+            <div class="tech-wrapper">
+                <div id="blob-frameworks" class="blob-effect"></div>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-icon-container">
                             <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/nextdotjs.svg" alt="Next.js" class="tech-icon">
-                            <p>Next.js</p>
                         </div>
-                        <div class="tech-item">
+                        <p>Next.js</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon-container">
                             <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/react.svg" alt="React" class="tech-icon">
-                            <p>React</p>
                         </div>
+                        <p>React</p>
                     </div>
                 </div>
-            </section>
+            </div>
+        </div>
+        <p id="quick-fix">HELLO TESTING DEBUGGING TESTING</p>
+    </section>
+
+    <div class="space">Hello</div>
+
+    <!-- CONTACT -->
+    <section class="main">
+        <section class="end">
+            <h1 class="connect">I'm always interested in new projects and opportunities. Reach out and I'll try my best to get back to you!</h1>
+            <a href="mailto:meiganlu@gmail.com?body=I%20look%20forward%20to%20getting%20to%20know%20you!" class="contact-button">
+                Let's connect!
+            </a>
         </section>
+    </section>
 
-        <div class="space">Hello</div>
-
-        <section class="main">
-            <section class="end">
-                <h1 class="connect">I'm always interested in new projects and opportunities. Reach out and I'll try my best to get back to you!</h1>
-                <a href="mailto:meiganlu@gmail.com?body=I%20look%20forward%20to%20getting%20to%20know%20you!" class="contact-button">
-                    Let's connect!
-                </a>
-            </section>
-        </section>
-
-        <!---------- FOOTER ---------->
-        <footer class="footer">
-            <p>© 2025 Meigan Lu. All Rights Reserved.</p>
-        </footer>
-    </body>
-    </html>
-    
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2025 Meigan Lu. All Rights Reserved.</p>
+    </footer>
+</body>
 </html>
