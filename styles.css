@@ -923,6 +923,10 @@ body {
         padding: 0;
     }
 
+    .navbar li {
+        font-size: 1vw;
+    }
+
     html, body {
         overflow-x: hidden;
         box-sizing: border-box;
@@ -933,7 +937,9 @@ body {
 
 @media only screen and (max-width: 600px) {
     .grabber {
-        font-size: 1.5rem;
+        font-size: 2.25rem;
+        padding-left: 4%;
+        padding-right: 4%;
     }
 
     .timeline-content {
@@ -947,6 +953,14 @@ body {
     .card {
         height: auto;
     }
+
+    .title {
+        font-size: 3.5rem;
+    }
+
+    .navbar li {
+        font-size: 2vw;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -957,6 +971,15 @@ body {
 
     .tabs {
         left: 31%;
+    }
+
+    .grabber {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .navbar li {
+        font-size: 2vw;
     }
 }
 
@@ -973,6 +996,10 @@ body {
     .space {
         padding-bottom: 0;
     }
+
+    .navbar li {
+        font-size: 2vw;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -987,6 +1014,10 @@ body {
 
     .tabs {
         left: 22%;
+    }
+
+    .navbar li {
+        font-size: 2vw;
     }
 }
 

@@ -335,6 +335,10 @@ footer {
         border-right: none;
         border-bottom: 1px solid #ccc;
     }
+
+    .navbar li {
+        font-size: 1vw;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -346,5 +350,29 @@ footer {
 
     .container {
         margin-top: 6%;
+    }
+
+    .navbar li {
+        font-size: 1vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar li {
+        font-size: 2vw;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    .navbar li {
+        font-size: 2vw;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .navbar li {
+        font-size: 2vw;
     }
 }
