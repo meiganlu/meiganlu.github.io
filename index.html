@@ -1,255 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meigan Lu</title>
-
-    <link rel="stylesheet" href="./styles.css" />
-    <script src="https://kit.fontawesome.com/cc56f14920.js" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <script src="./app.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meigan's Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
+<body class="bg-white text-gray-900 antialiased">
 
-<body class="home">
-    <div id="page-loader">
-        <div class="loader-spinner"></div>
-    </div>
-
-    <!-- NAV BAR -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="./index.html" class="link">Home</a></li>
-            <li><a href="./about.html" class="link">About</a></li>
-            <li><a href="https://github.com/meiganlu" class="link" target="_blank">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/meigan-lu/" class="link" target="_blank">LinkedIn</a></li>
+    <!-- Navbar -->
+    <nav class="fixed top-5 left-1/2 transform -translate-x-1/2 flex items-center justify-center px-6 py-2 bg-white/25 backdrop-blur-sm rounded-full shadow-lg z-50">
+        <ul class="flex items-center justify-center gap-2 sm:gap-2 md:gap-3">
+            <li>
+                <a href="#projects" class="px-4 py-1 rounded-full text-black text-sm sm:text-base hover:bg-white/40 transition">
+                    Projects
+                </a>
+            </li>
+            <li>
+                <a href="#about" class="px-4 py-1 rounded-full text-black text-sm sm:text-base hover:bg-white/40 transition">
+                    About
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/meiganlu" target="_blank" class="px-4 py-1 rounded-full text-black text-sm sm:text-base hover:bg-white/40 transition">
+                    GitHub
+                </a>
+            </li>
         </ul>
     </nav>
 
-    <!-- HEADER -->
-    <section class="showcase overflow-hidden">
-        <h1 class="title line line-horizontal animation-show overflow-hidden">
-            <span class="has-in-common overflow-hidden" style="font-weight: 300">Hi, I'm
-                <span style="color: #a855f7; line-height: 1.05;">Meigan</span>.
-            </span>
-            <span class="has-in-common overflow-hidden">
-                <span style="background: linear-gradient(90deg, #d946ef, #8b5cf6); 
+    <!-- Hero -->
+    <section class="hero-section min-h-[90vh] flex items-center text-center px-8 pt-20"
+    style="background: radial-gradient(circle at top center, rgba(123, 37, 185, 0.79), rgba(255, 255, 255, 1) 65%);">
+        <div class="max-w-5xl mx-auto w-full">
+            <div class="fade-in">
+                <h1 class="text-6xl md:text-7xl font-light mb-6 text-black">
+                    Hi, I'm Meigan.
+                </h1>
+                <p class="text-6xl md:text-7xl text-black mb-10"
+                style="background: linear-gradient(90deg, #a772fc, #160147); 
                 -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-weight: 300; line-height: 1.05;">
-                    <br>Full-Stack
-                </span>
-                <span style="font-weight: 300">Developer.</span>
-            </span>
-        </h1>
-
-        <div class="description line line-horizontal animation-show">
-            <span class="button"><span class="area live pulse"></span>DAVIS, CA</span>
-            <p class="overflow-hidden">  
-                <span class="main-body" style="--delay: 0.75s">
-                    <span class="grabber has-in-common">I like to build projects that are
-                        <span style="color:#a855f7">efficient</span>, <span style="color:#8b5cf6">functional</span>,
-                        and 
-                        <span style="background: linear-gradient(90deg, #d946ef, #8b5cf6); 
-                        -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent">
-                            user-centric.
-                        </span>
-                    </span>
-                </span>
-            </p>
-        </div>
-    </section>
-
-    <!-- WORK EXPERIENCE -->
-    <section class="main">
-        <h3 class="project-header">Work Experience</h3>
-        <section class="experience">
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">OCT 2024 - MAY 2025</div>
-                        <div class="timeline-title">Groq</div>
-                        <div class="timeline-role">Cloud Inference Intern</div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Rust</span>
-                            <span class="tech-tag">Test Automation</span>
-                            <span class="tech-tag">CI/CD</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">JULY 2024 - SEPT 2024</div>
-                        <div class="timeline-title">Groq</div>
-                        <div class="timeline-role">NPI Test Development Engineer Intern</div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Test Automation</span>
-                        </div>
-                        <div class="timeline-description">
-                            <ul>
-                                <li>Developed and debugged automated testing programs for GroqCard accelerators using Python and Linux to streamline firmware configuration.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </section>
-
-    <!-- PROJECTS -->
-    <section class="projects-section">
-        <h3 class="project-header">Featured Projects</h3>
-        <section class="projects">
-            <div class="card p1" id="project-card">
-                <div class="card-header">
-                    <div class="traffic-lights">
-                        <div class="light red"></div>
-                        <div class="light yellow"></div>
-                        <div class="light green"></div>
-                    </div>
-                    <div class="tabs">
-                        <div class="tab"></div>
-                        <div class="tab1"></div>
-                        <div class="tab1"></div>
-                    </div>
-                </div>
-                <div class="img-container">
-                    <img src="/assets/images/studybites.png" alt="StudyBites Screenshot" />
-                </div>
-                <div class="card-body">
-                    <h1 class="card-title">StudyBites</h1>
-                    <div class="info-text">A tool to streamline and optimize finding the perfect local study spot.</div>
-                    <div class="project-tech-stack">React</div>
-                    <div class="project-tech-stack">Next.js</div>
-                    <div class="project-tech-stack">TypeScript</div>
-                    <div class="project-tech-stack">Tailwind CSS</div>
-                    <div class="project-tech-stack">Google API</div>
-                    <div class="card-buttons">
-                        <a href="https://github.com/meiganlu/StudyBites" target="_blank" class="btn btn-btn">GitHub</a>
-                        <a href="https://studybites-opal.vercel.app/" target="_blank" class="btn btn-btn">Live</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </section>
-
-    <!-- TECH STACK -->
-    <section class="work-section">
-        <h3 class="project-header">Tech Stack</h3>
-        
-        <div class="tech-section">
-            <h3 class="subsection-title">Programming Languages</h3>
-            <div class="tech-wrapper">
-                <div id="blob-frameworks" class="blob-effect"></div>
-                <div class="tech-grid">
-                    <div class="tech-item">
-                        <div class="tech-icon-container">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-plain.svg" alt="Java" class="tech-icon">
-                        </div>
-                        <p>Java</p>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon-container">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/python.svg" alt="Python" class="tech-icon">
-                        </div>
-                        <p>Python</p>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon-container">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/cplusplus.svg" alt="C++" class="tech-icon">
-                        </div>
-                        <p>C++</p>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon-container">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/rust.svg" alt="Rust" class="tech-icon">
-                        </div>
-                        <p>Rust</p>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon-container">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/go.svg" alt="Go" class="tech-icon">
-                        </div>
-                        <p>Go</p>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon-container">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/typescript.svg" alt="TypeScript" class="tech-icon">
-                        </div>
-                        <p>TypeScript</p>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon-container">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/javascript.svg" alt="Tailwind CSS" class="tech-icon">
-                        </div>
-                        <p>Javascript</p>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon-container">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/html5.svg" alt="Tailwind CSS" class="tech-icon">
-                        </div>
-                        <p>HTML</p>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon-container">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/css3.svg" alt="Tailwind CSS" class="tech-icon">
-                        </div>
-                        <p>CSS</p>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon-container">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/tailwindcss.svg" alt="Tailwind CSS" class="tech-icon">
-                        </div>
-                        <p>Tailwind CSS</p>
-                    </div>
-                </div>
+                    Full-Stack Developer.
+                </p>
+                <p class="flex justify-center mb-2">
+                    <button class="flex items-center gap-2 px-4 py-1 bg-violet-100/40 backdrop-blur-md border border-white/20 rounded-full text-gray-700 font-medium hover:bg-violet-100/50 transition">
+                        <span class="status-dot"></span>
+                        Elk Grove, CA
+                    </button>
+                </p>
             </div>
         </div>
-        
-        <div class="tech-section">
-            <h3 class="subsection-title">Libraries & Frameworks</h3>
-            <div class="tech-wrapper">
-                <div id="blob-frameworks" class="blob-effect"></div>
-                <div class="tech-grid">
-                    <div class="tech-item">
-                        <div class="tech-icon-container">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/nextdotjs.svg" alt="Next.js" class="tech-icon">
+    </section>
+
+    <!-- Experience -->
+    <section class="py-20 px-8">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-sm font-medium text-gray-500 mb-12">EXPERIENCE</h2>
+            
+            <div class="relative">
+                <div class="absolute left-0 top-0 h-full timeline-line"></div>
+                
+                <div class="space-y-8">
+                    <div class="relative pl-6">
+                        <div class="absolute left-0 top-2 timeline-dot"></div>
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="font-medium">Groq</h3>
+                                <p class="text-sm text-gray-600">Cloud Inference Intern</p>
+                            </div>
+                            <span class="text-sm text-gray-500">Oct 2024 - May 2025</span>
                         </div>
-                        <p>Next.js</p>
+                        <div class="flex gap-2 mt-2">
+                            <span class="pill">Rust</span>
+                            <span class="pill">CI/CD</span>
+                            <span class="pill">Test Automation</span>
+                        </div>
                     </div>
-                    <div class="tech-item">
-                        <div class="tech-icon-container">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/react.svg" alt="React" class="tech-icon">
+
+                    <div class="relative pl-6">
+                        <div class="absolute left-0 top-2 timeline-dot"></div>
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="font-medium">Groq</h3>
+                                <p class="text-sm text-gray-600">NPI Test Development Intern</p>
+                            </div>
+                            <span class="text-sm text-gray-500">Jul 2024 - Sep 2024</span>
                         </div>
-                        <p>React</p>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon-container">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/svelte.svg" alt="Svelte" class="tech-icon">
+                        <div class="flex gap-2 mt-2">
+                            <span class="pill">Python</span>
+                            <span class="pill">Test Automation</span>
                         </div>
-                        <p>Svelte</p>
+                        <div ul class="text-sm list-disc list-inside text-gray-600 mt-6 space-y-1">
+                            <li>Developed and debugged automated testing programs for GroqCard accelerators using Python and Linux to streamline firmware configuration.</li>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT -->
-    <section class="main">
-        <section class="end">
-            <h1 class="connect">I'm always interested in new projects and opportunities. Reach out and I'll try my best to get back to you!</h1>
-            <a href="mailto:meiganlu@gmail.com?body=I%20look%20forward%20to%20getting%20to%20know%20you!" class="contact-button">
-                Let's connect!
-            </a>
-        </section>
+    <!-- Projects -->
+    <section id="projects" class="py-20 px-8 bg-[rgba(232,220,252,0.5)]">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-sm font-medium text-gray-500 mb-12">FEATURED PROJECTS</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- StudySpotter -->
+                <div class="mb-10">
+                    <div class="browser mb-4 content-center">
+                        <div class="browser-header">
+                            <div class="browser-dot dot-red"></div>
+                            <div class="browser-dot dot-yellow"></div>
+                            <div class="browser-dot dot-green"></div>
+                        </div>
+                        <div class="browser-content">
+                            <img src="/assets/images/studyspotter.png" alt="StudySpotter" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <h3 class="font-medium mb-2">StudySpotter</h3>
+                    <p class="text-sm text-gray-600 mb-3">A tool to optimize finding the perfect local study spot for you.</p>
+                    <div class="flex gap-2 flex-wrap mb-3">
+                        <span class="pill">React</span>
+                        <span class="pill">Next.js</span>
+                        <span class="pill">TypeScript</span>
+                        <span class="pill">Tailwind CSS</span>
+                        <span class="pill">Google API</span>
+                    </div>
+                    <div class="flex gap-2 text-sm mt-6">
+                        <a href="https://github.com/meiganlu/StudyBites" target="_blank" class="project-link">GitHub</a>
+                        <a href="https://studybites-opal.vercel.app/" target="_blank" class="project-link">Live</a>
+                    </div>
+                </div>
+
+                <!-- <div>
+                    <div class="browser mb-4">
+                        <div class="browser-header">
+                            <div class="browser-dot dot-red"></div>
+                            <div class="browser-dot dot-yellow"></div>
+                            <div class="browser-dot dot-green"></div>
+                        </div>
+                        <div class="browser-content">
+                            <div class="bg-gradient-to-br from-gray-100 to-gray-200 h-full flex items-center justify-center">
+                                <span class="text-4xl font-light text-gray-600">Coming Soon</span>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="font-medium mb-2">Project One still</h3>
+                    <p class="text-sm text-gray-600 mb-3">Description here</p>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="pill">React</span>
+                        <span class="pill">Node.js</span>
+                    </div>
+                </div> -->
+            </div>
+        </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <p>© 2025 Meigan Lu. All Rights Reserved.</p>
+    <!-- About -->
+    <section id="about" class="py-20 px-8">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-sm font-medium text-gray-500 mb-12">ABOUT</h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        <span class="font-bold" style="background: linear-gradient(90deg, #ca58dc, #8b5cf6); 
+                        -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent">Welcome!</span> I earned my Computer Science degree (BS) at the University of California, Davis. 
+                        I'm passionate about all things software and am always on the lookout to grow and push the boundaries 
+                        of what I know! I'm the person staying up until 2am fixing the space margins on my site.
+                        <br><br>I'm interested in new projects and job opportunities, so feel free to reach out if you'd like to connect!
+                    </p>
+                </div>
+                <div>
+                    <h2 class="text-sm font-medium text-gray-500 mb-12">TECH STACK</h2>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="pill">JavaScript</span>
+                        <span class="pill">TypeScript</span>
+                        <span class="pill">Python</span>
+                        <span class="pill">Rust</span>
+                        <span class="pill">React</span>
+                        <span class="pill">Next.js</span>
+                        <span class="pill">Java</span>
+                        <span class="pill">Go</span>
+                        <span class="pill">HTML</span>
+                        <span class="pill">CSS</span>
+                        <span class="pill">Tailwind CSS</span>
+                        <span class="pill">C++</span>
+                        <span class="pill">Svelte</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2 class="text-sm font-medium text-gray-500 mb-12 mt-20">DESIGN GOALS</h2>
+                <div class="grid md:grid-cols-3 gap-12 mb-12 items-center">             
+                    <p class="goals text-sm text-gray-600 leading-relaxed bg-[rgba(232,220,252,0.5)] h-[40vh]">
+                        01<br><span class="text-lg font-medium">Scalability</span>
+                        <br><br>True success from a product lies in its ability to expand and meet evolving demands through iteration. For example, 
+                        I built this website with the intention that it would grow with me, providing a space to showcase the projects I've made over time.
+                    </p>
+                    <p class="goals text-sm text-gray-600 leading-relaxed bg-[rgba(232,220,252,0.5)] h-[40vh]">
+                        02<br><span class="text-lg font-medium">Reliability</span>
+                        <br><br>A product is only as important as its ability to consistently meet user expectations, which in turn builds trust.
+                        I ensure that products maintain a dependable experience.
+                    </p>
+                    <p class="goals text-sm text-gray-600 leading-relaxed bg-[rgba(232,220,252,0.5)] h-[40vh]">
+                        03<br><span class="text-lg font-medium">Practical & Innovative</span>
+                        <br><br>Delivering real-world solutions requires addressing real-world constraints from production costs 
+                        to customer needs. I strive to balance my creativity with practicality, ensuring that solutions aren't merely 
+                        cutting-edge but also sustainable.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-8 border-t border-gray-100">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex justify-between items-center">
+                <p class="text-sm text-gray-500">© 2025 Meigan Lu. All Rights Reserved.</p>
+                <div class="flex gap-6 text-sm">
+                    <a href="https://www.linkedin.com/in/meigan-lu/" target="_blank" class="link-underline footer-link">LinkedIn</a>
+                    <a href="mailto:meiganlu@gmail.com" target="_blank" class="link-underline footer-link">Email</a>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
