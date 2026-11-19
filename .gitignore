@@ -1,0 +1,15 @@
+# Mac system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+
+# Editor settings
+.vscode/
+
+# Raw screen recordings (only the compressed videos in assets/videos belong on the site)
+recordings/
+*.mov
+
+# Zips
+*.zip
