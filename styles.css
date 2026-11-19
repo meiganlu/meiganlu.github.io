@@ -1,225 +1,734 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;800&display=swap");
+/* ---------- 1. Design tokens (change colors/fonts here) ---------- */
+:root {
+    --bg: #fbfbfc;
+    --dots: #e7e6ec;
+    --card: #ffffff;
+    --ink: #121117;
+    --ink-2: #3c3946;          /* body text */
+    --muted: #6b6875;          /* labels, dates */
+    --line: #e9e8ee;           /* thin dividers */
+    --border: #e3e1ea;         /* folder outline */
+    --accent: #8a3fc7;         /* orchid purple (passes contrast on white) */
+    --accent-soft: #c9b2f0;    /* lavender: hover outlines, email underline */
+    --sparkle: #b78cf0;
+    --tint: #f3edfd;           /* team-label fill */
+    --tint-media: #efe8fb;     /* behind videos before they load */
+    --status-line: #e3d8f6;
 
-* {
-    margin: 0;
-    padding: 0;
+    --live: #0b7a42;
+    --live-line: #bfe3cf;
+
+    --font-main: 'Quicksand', system-ui, sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+    --font-hand: 'Caveat', cursive;
+
+    --max-width: 940px;
+    --folder-width: 860px;     /* project folder size on laptops; keep it = max-width minus 80px */
+    --gutter: clamp(16px, 4vw, 40px);
+    --shadow: 0 1px 2px rgba(18, 17, 23, 0.04), 0 16px 40px rgba(18, 17, 23, 0.06);
+    /* Folder hover glow: soft blurred lilac light, no outline. Raise the last numbers for a stronger glow. */
+    --glow-hover: drop-shadow(0 0 5px rgba(170, 120, 240, 0.25)) drop-shadow(0 5px 20px rgba(138, 63, 199, 0.20));
+}
+
+/* ---------- 2. Base ---------- */
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 body {
-    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    font-family: var(--font-main);
+    font-weight: 500;
+    color: var(--ink);
+    background-color: var(--bg);
+    background-image: radial-gradient(var(--dots) 1px, transparent 1px);
+    background-size: 24px 24px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
     overflow-x: hidden;
 }
 
-/* Hero Section */
-.hero-section {
-    position: relative;
+a {
+    color: var(--ink);
+    transition: color 0.2s ease;
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from { 
-        opacity: 0; 
-        transform: translateY(20px); 
-    }
-    to { 
-        opacity: 1; 
-        transform: translateY(0); 
-    }
+a:hover {
+    color: var(--accent);
 }
 
-.fade-in {
-    animation: fadeIn 0.8s ease forwards;
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 6px;
 }
 
-.link-underline {
-    position: relative;
-    text-decoration: none;
-    transition: color 0.3s ease;
+h1, h2, h3, p, ul {
+    margin: 0;
 }
 
-.link-underline::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background: currentColor;
-    transition: width 0.3s ease;
+ul {
+    padding: 0;
+    list-style: none;
 }
 
-.link-underline:hover::after {
-    width: 100%;
-}
-
-.nav-link {
-    color: #4b5563;
-    transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-    color: #111827;
-}
-
-.footer-link {
-    color: #4b5563;
-    transition: color 0.3s ease;
-}
-
-.footer-link:hover {
-    color: #111827;
-}
-
-.browser {
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #e5e7ebb0;
-    width: 93%;
-    height: auto;
-}
-
-.browser:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
-}
-
-.browser-header {
-    background: rgba(66, 32, 122, 0.7);
-    padding: 12px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    border-bottom: 1px solid #e5e7ebb0;
-}
-
-.browser-dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-}
-
-.dot-red { 
-    background: #eb5045; 
-}
-
-.dot-yellow { 
-    background: #f2b853; 
-}
-
-.dot-green { 
-    background: #12c87d; 
-}
-
-.browser-content {
-    background: white;
-    height: 300px;
-    overflow: hidden;
-    position: relative;
-}
-
-.browser-content img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
-}
-
-.browser-content > div {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.gradient-text {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.timeline-dot {
-    width: 8px;
-    height: 8px;
-    background: rgb(132, 105, 176);
-    border-radius: 50%;
-    margin-left: -3.5px;
-}
-
-.timeline-line {
-    width: 1px;
-    background: linear-gradient(to bottom, #e5e7eb 0%, transparent 100%);
-}
-
-.pill {
-    padding: 4px 12px;
-    background: rgba(206, 201, 232, 0.5);
-    border-radius: 9999px;
-    font-size: 0.75rem;
-    transition: background 0.2s ease;
-}
-
-.pill:hover {
-    background: rgba(206, 201, 232, 0.7);
+img,
+video {
+    display: block;
+    max-width: 100%;
 }
 
 ::selection {
-    background: #6366f1;
-    color: white;
+    background: var(--accent);
+    color: #ffffff;
 }
 
-@keyframes pulse {
-    0%, 100% { 
-        opacity: 1; 
-    }
-    50% { 
-        opacity: 0.5; 
-    }
+/* ---------- 3. Layout helpers ---------- */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+}
+
+.section {
+    padding-bottom: clamp(64px, 10vw, 112px);
+}
+
+/* Small mono section labels */
+.label {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+}
+
+.mono {
+    font-family: var(--font-mono);
+}
+
+/* Handwritten notes */
+.note {
+    font-family: var(--font-hand);
+    font-size: 24px;
+    color: var(--accent);
+    transform: rotate(-2deg);
+    align-self: flex-start;
+}
+
+/* ---------- 4. Header ---------- */
+.site-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px 12px;
+    padding-top: 28px;
+}
+
+.stamp {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid var(--accent);
+    border-radius: 12px;
+    background: var(--card);
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    transform: rotate(-4deg);
+    transition: transform 0.3s ease;
+}
+
+.stamp:hover {
+    transform: rotate(4deg);
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: var(--font-mono);
+    font-size: 13px;
+}
+
+.nav a {
+    padding: 13px 12px;           /* 44px tall tap area */
+    text-decoration: none;
+}
+
+/* ---------- 5. Hero ---------- */
+.hero {
+    max-width: 620px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: clamp(64px, 11vw, 140px) 0 clamp(64px, 9vw, 112px);
+}
+
+.hero-title {
+    position: relative;
+}
+
+.hero .note {
+    align-self: center;
+}
+
+.hero h1 {
+    font-size: clamp(34px, 5vw, 56px);
+    line-height: 1.05;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+}
+
+.sparkle {
+    position: absolute;
+    top: -10px;
+    right: -26px;
+    fill: var(--sparkle);
+    animation: twinkle 3s ease-in-out infinite;
+}
+
+.lead {
+    font-size: clamp(16px, 1.6vw, 19px);
+    line-height: 1.6;
+    color: var(--ink-2);
+}
+
+.status {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.status li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
 .status-dot {
-    width: 10px;
-    height: 10px;
-    background: #01ac57;
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
-    display: inline-block;
-    animation: pulse 2s infinite;
+    background: #0e9f55;
+    animation: blink 2.4s ease-in-out infinite;
 }
 
-.goals {
-    border-radius: 8px;
+/* ---------- 6. Project folders ---------- */
+.work {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(48px, 6vw, 72px);
+}
+
+.folder {
+    position: relative;           /* the card-link overlay fills this */
+    width: 100%;
+    max-width: var(--folder-width);   /* smaller on laptops; phones still use the full width */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, filter 0.3s ease;
+}
+
+/* The tab on top of each folder */
+.folder-tab {
+    align-self: flex-start;
+    max-width: 100%;
+    position: relative;
+    z-index: 2;
+    margin-bottom: -1px;          /* overlaps the body's top border so they join */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 20px 12px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-bottom-color: var(--card);
+    border-radius: 14px 14px 0 0;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--ink);
+    transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+.folder-icon {
+    flex: none;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linejoin: round;
+}
+
+.folder-num {
+    color: var(--accent);
+}
+
+.folder-name {
+    white-space: nowrap;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #e5e7eb;
-    padding: 10%;
+    text-overflow: ellipsis;      /* long names get "…" on tiny screens */
 }
 
-.goals:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+/* The folder itself */
+.folder-body {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 0 18px 18px 18px;
+    padding: clamp(10px, 1.2vw, 14px);
+    box-shadow: var(--shadow);
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-.project-link {
-    padding: 4px 12px;
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 9999px;
-    font-size: 0.75rem;
+/* Video area */
+.media {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--tint-media);
+}
+
+.media-dark {
+    background: #1e1f22;
+}
+
+.media video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pause-btn {
+    position: absolute;
+    z-index: 3;                   /* sits above the card-link overlay */
+    right: 12px;
+    bottom: 12px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background: rgba(18, 17, 23, 0.6);
+    color: #ffffff;
+    cursor: pointer;
     transition: background 0.2s ease;
-    box-shadow: 0 10px 20px rgba(206, 201, 232, 0.5);
-    border: rgb(219, 219, 219);
 }
 
-.project-link:hover {
-    background: white;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(165, 158, 213, 0.5);
+.pause-btn:hover {
+    background: rgba(18, 17, 23, 0.8);
+}
+
+.pause-btn svg {
+    fill: currentColor;
+}
+
+.pause-btn .icon-play,
+.pause-btn.is-paused .icon-pause {
+    display: none;
+}
+
+.pause-btn.is-paused .icon-play {
+    display: block;
+}
+
+.pause-btn[hidden] {
+    display: none;
+}
+
+/* Text + buttons under the video */
+.folder-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 18px 40px;
+    padding: clamp(16px, 2vw, 24px) clamp(6px, 1vw, 12px) clamp(6px, 1vw, 10px);
+}
+
+.folder-text {
+    flex: 1 1 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.folder-text p {
+    max-width: 560px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--ink-2);
+}
+
+.folder-text .stack {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.title-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 12px;
+}
+
+.folder h3 {
+    font-size: clamp(21px, 2.4vw, 28px);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+}
+
+.card-link {
+    text-decoration: none;
+}
+
+/* Makes the whole folder clickable without nesting links */
+.card-link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.card-link:focus-visible {
+    outline: none;
+}
+
+.folder:focus-within .folder-body {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+}
+
+.badge-live {
+    padding: 3px 8px;
+    border: 1px solid var(--live-line);
+    border-radius: 6px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--live);
+}
+
+.folder-actions {
+    position: relative;
+    z-index: 2;                   /* buttons stay clickable above the overlay */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-dark {
+    background: var(--ink);
+    color: #ffffff;
+}
+
+.btn-dark:hover {
+    background: var(--accent);
+    color: #ffffff;
+}
+
+.btn-light {
+    background: var(--card);
+    border: 1px solid var(--border);
+}
+
+.btn-light:hover {
+    border-color: var(--accent-soft);
+}
+
+@media (hover: hover) {
+    .folder:hover {
+        transform: translateY(-4px);
+        filter: var(--glow-hover);
+    }
+
+    .folder:hover .folder-tab {
+        color: var(--accent);
+    }
+}
+
+.folder:active {
+    transform: scale(0.985);
+    filter: var(--glow-hover);
+}
+
+.folder:active .folder-tab {
+    color: var(--accent);
+}
+
+/* ---------- 7. Experience ---------- */
+.rows {
+    margin-top: 20px;
+    border-top: 1px solid var(--line);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 6px 24px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.row-main {
+    flex: 1 1 300px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px 12px;
+}
+
+.row-main strong {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.row-main span {
+    font-size: 16px;
+    color: var(--ink-2);
+}
+
+/* Small team label next to the job title */
+.row-main .row-team {
+    padding: 2px 8px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--tint);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--muted);
+}
+
+.row-meta {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.row-stack {
+    flex: 1 1 220px;
+}
+
+/* ---------- 8. About ---------- */
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 64px;
+}
+
+.about-text {
+    flex: 1 1 380px;
+    max-width: 560px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.about-text p {
+    font-size: 17px;
+    line-height: 1.65;
+    color: #2a2733;
+}
+
+.about-stack {
+    flex: 1 1 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Toolkit: label on the left, items on the right */
+.toolkit {
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    border-top: 1px solid var(--line);
+    font-family: var(--font-mono);
+    font-size: 13px;
+}
+
+.toolkit dt,
+.toolkit dd {
+    margin: 0;
+    padding: 11px 0;
+    border-bottom: 1px solid var(--line);
+    line-height: 1.6;
+}
+
+.toolkit dt {
+    padding-right: 20px;
+    color: var(--muted);
+    white-space: nowrap;
+}
+
+.toolkit dd {
+    color: var(--ink-2);
+}
+
+/* ---------- 9. Contact ---------- */
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: clamp(48px, 7vw, 80px) 0 40px;
+    border-top: 1px solid var(--line);
+}
+
+.contact .note {
+    font-size: 26px;
+}
+
+.email {
+    align-self: flex-start;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    font-size: clamp(24px, 4vw, 44px);
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 8px;
+    text-decoration-color: var(--accent-soft);
+}
+
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+}
+
+.social a {
+    padding: 12px 0;
+}
+
+.fine-print {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 32px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--muted);
+}
+
+/* ---------- 10. Motion ---------- */
+@keyframes twinkle {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    50%      { transform: scale(1.15) rotate(15deg); }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: 0.35; }
+}
+
+/* Fade-in on scroll (only when JavaScript is running) */
+.js .reveal {
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.js .reveal:not(.is-visible) {
+    opacity: 0;
+    transform: translateY(16px);
+}
+
+.js .folder.reveal.is-visible {
+    transition: opacity 0.7s ease, transform 0.25s ease, filter 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .js .reveal:not(.is-visible) {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* ---------- 11. Small screens ---------- */
+@media (max-width: 600px) {
+    .folder-tab {
+        padding: 10px 16px 11px;
+        font-size: 12px;
+        gap: 8px;
+        border-radius: 12px 12px 0 0;
+    }
+
+    .folder-body {
+        border-radius: 0 16px 16px 16px;
+    }
+
+    .media {
+        border-radius: 10px;
+    }
+
+    .pause-btn {
+        right: 6px;
+        bottom: 6px;
+    }
+
+    .folder-text p {
+        font-size: 15px;
+    }
+
+    /* Buttons share the row and are easy to tap */
+    .folder-actions {
+        width: 100%;
+    }
+
+    .folder-actions .btn {
+        flex: 1;
+        padding: 13px 10px;
+    }
+
+    .nav a {
+        padding: 13px 8px;
+        font-size: 12px;
+    }
 }
